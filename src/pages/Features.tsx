@@ -7,7 +7,7 @@ const Features: React.FC = () => {
     {
       icon: <Database className="w-8 h-8 text-blue-600" />,
       title: "Database Management",
-      description: "Search, communicate, and engage with your potential candidates with candidate management system. Let AI help you get through the bulk and reach the best candidates faster. AI screening gets you the key skills based on experience, just like a human does. Know them better to nurture with personalisation and aspiration alignment.",
+      description: "Search, communicate, and engage with potential candidates using our AI-powered candidate management system. Get through the bulk and reach the best candidates faster.",
       color: "blue",
       gradient: "from-blue-50 to-indigo-50",
       features: [
@@ -15,13 +15,12 @@ const Features: React.FC = () => {
         "Duplicate Detection", 
         "Source Management",
         "Advanced Search Filters"
-      ],
-      image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1"
+      ]
     },
     {
       icon: <Users className="w-8 h-8 text-green-600" />,
       title: "Applicant Tracking",
-      description: "Accelerate your hiring process with visibility. Reduce the frustration of working on disparate systems. Save time with Talentpool's applicant tracking module, along with tools such as Candidate 360, document management, and onboarding. Empower your team with insights and make your recruitment process more agile and efficient.",
+      description: "Accelerate your hiring process with visibility. Reduce frustration of disparate systems and save time with our comprehensive tracking module.",
       color: "green",
       gradient: "from-green-50 to-emerald-50",
       features: [
@@ -29,13 +28,12 @@ const Features: React.FC = () => {
         "Automatic To-do",
         "Visibility",
         "Role-based Access"
-      ],
-      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1"
+      ]
     },
     {
       icon: <Calendar className="w-8 h-8 text-purple-600" />,
       title: "Interview Management",
-      description: "Simplify the intricate process of manual interview scheduling and the prolonged application process. Eliminate the risk of scheduling conflicts and double bookings with Talentpool's automatic interview scheduling tool, calendar integration, and automated reminders. Keep your candidates informed and engaged for better interview outcomes.",
+      description: "Simplify manual interview scheduling and eliminate conflicts with automatic scheduling, calendar integration, and automated reminders.",
       color: "purple",
       gradient: "from-purple-50 to-pink-50",
       features: [
@@ -43,103 +41,71 @@ const Features: React.FC = () => {
         "Virtual Recruiter: Maya",
         "Feedback Management",
         "Calendar Integration"
-      ],
-      image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1"
+      ]
     },
     {
       icon: <BarChart3 className="w-8 h-8 text-orange-600" />,
       title: "Reports and Analytics",
-      description: "Obtain real-time visibility into your recruitment performance instead of waiting for a weekly report from your recruiters. Get all recruitment data at your fingertips to dissect and analyze from multiple metrics. Leverage ready analytics and visual interactive dashboards to identify trends. Track correctly, measure against benchmarks and improve with data-backed decisions.",
+      description: "Get real-time visibility into recruitment performance with ready analytics and interactive dashboards to identify trends and improve decisions.",
       color: "orange",
       gradient: "from-orange-50 to-red-50",
       features: [
         "Report Builder",
         "Personalised Dashboard",
         "Track Performance"
-      ],
-      image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1"
+      ]
     },
     {
       icon: <UserPlus className="w-8 h-8 text-teal-600" />,
       title: "Employee Referral",
-      description: "With a transparent referral system, tap into the valuable networks of existing employees to source top talent and shorten your time to hire. Eliminate time-consuming manual entry, increase visibility on performance, and ensure every referral is tracked with incentives and eligibility requirements.",
+      description: "Tap into valuable employee networks with a transparent referral system to source top talent and shorten time to hire.",
       color: "teal",
       gradient: "from-teal-50 to-cyan-50",
       features: [
         "Easy Referrals",
         "Candidate tracking",
         "Rewards"
-      ],
-      image: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1"
+      ]
     },
     {
       icon: <Building className="w-8 h-8 text-indigo-600" />,
       title: "Vendor Management",
-      description: "Traditional hiring approach deters the hiring velocity and poses challenges which can be easily be overcome with the help of recruitment software. With deep understanding and selection processes across segments and organizational stages, Talentpool brings you useful modules and productivity tools to increase efficiency of your team.",
+      description: "Overcome traditional hiring challenges with deep understanding of selection processes and productivity tools to increase team efficiency.",
       color: "indigo",
       gradient: "from-indigo-50 to-purple-50",
       features: [
         "Manage Vendors",
         "Candidate Management",
         "Measure ROI"
-      ],
-      image: "https://images.pexels.com/photos/4226122/pexels-photo-4226122.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1"
+      ]
     },
     {
       icon: <FileText className="w-8 h-8 text-pink-600" />,
       title: "Resume Management",
-      description: "Leverage AI-powered resume processing to automatically screen, parse, and rank candidates based on job requirements. Transform unstructured resume data into actionable insights and streamline your candidate evaluation process.",
+      description: "Leverage AI-powered resume processing to automatically screen, parse, and rank candidates based on job requirements.",
       color: "pink",
       gradient: "from-pink-50 to-rose-50",
       features: [
         "AI Screening",
         "Resume Parsing",
         "Resume Ranking"
-      ],
-      image: "https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1"
+      ]
     }
   ];
 
   const integrations = [
-    { name: "Naukri", logo: "/1.png", category: "Job Boards" },
-    { name: "LinkedIn", logo: "/2.png", category: "Professional Networks" },
-    { name: "Indeed", logo: "/3.png", category: "Job Boards" },
-    { name: "Slack", logo: "/4.png", category: "Communication" },
-    { name: "Microsoft Teams", logo: "/5.png", category: "Communication" },
-    { name: "Google Workspace", logo: "/6.png", category: "Productivity" },
-    { name: "Zoom", logo: "/7.png", category: "Video Conferencing" },
-    { name: "Outlook", logo: "/8.png", category: "Email" },
-    { name: "DocuSign", logo: "/9.png", category: "Document Management" },
-    { name: "BambooHR", logo: "/10.png", category: "HRMS" },
-    { name: "Workday", logo: "/11.png", category: "HRMS" },
-    { name: "Greenhouse", logo: "/12.png", category: "ATS Integration" }
-  ];
-
-  const integrationCategories = [
-    {
-      title: "Job Boards & Sourcing",
-      description: "Connect with major job boards and sourcing platforms",
-      icon: <Globe className="w-6 h-6 text-blue-600" />,
-      integrations: integrations.filter(i => i.category === "Job Boards" || i.category === "Professional Networks")
-    },
-    {
-      title: "Communication & Collaboration",
-      description: "Seamlessly integrate with your team's communication tools",
-      icon: <MessageSquare className="w-6 h-6 text-green-600" />,
-      integrations: integrations.filter(i => i.category === "Communication" || i.category === "Video Conferencing")
-    },
-    {
-      title: "HRMS & Document Management",
-      description: "Connect with your existing HR systems and workflows",
-      icon: <Settings className="w-6 h-6 text-purple-600" />,
-      integrations: integrations.filter(i => i.category === "HRMS" || i.category === "Document Management" || i.category === "ATS Integration")
-    },
-    {
-      title: "Productivity & Email",
-      description: "Integrate with productivity suites and email platforms",
-      icon: <Zap className="w-6 h-6 text-orange-600" />,
-      integrations: integrations.filter(i => i.category === "Productivity" || i.category === "Email")
-    }
+    { name: "Naukri", logo: "/1.png" },
+    { name: "LinkedIn", logo: "/2.png" },
+    { name: "Indeed", logo: "/3.png" },
+    { name: "Slack", logo: "/4.png" },
+    { name: "Microsoft Teams", logo: "/5.png" },
+    { name: "Google Workspace", logo: "/6.png" },
+    { name: "Zoom", logo: "/7.png" },
+    { name: "Outlook", logo: "/8.png" },
+    { name: "DocuSign", logo: "/9.png" },
+    { name: "BambooHR", logo: "/10.png" },
+    { name: "Workday", logo: "/11.png" },
+    { name: "Greenhouse", logo: "/12.png" }
   ];
 
   return (
@@ -165,74 +131,45 @@ const Features: React.FC = () => {
         </div>
       </section>
 
-      {/* Feature Categories */}
+      {/* Feature Cards Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featureCategories.map((category, index) => (
-              <div key={index} className="relative">
-                {/* Decorative background elements */}
-                <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                  <div className={`absolute ${index % 2 === 0 ? 'top-20 left-20' : 'bottom-20 right-20'} w-64 h-64 bg-gradient-to-br ${category.gradient} rounded-full blur-3xl opacity-20`}></div>
+              <div key={index} className={`bg-gradient-to-br ${category.gradient} rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group`}>
+                {/* Icon and Title */}
+                <div className="text-center mb-6">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-2xl shadow-sm mb-4 group-hover:scale-110 transition-transform">
+                    {category.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    {category.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {category.description}
+                  </p>
                 </div>
 
-                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                  {/* Image Section */}
-                  <div className={`relative ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                    <div className="relative group">
-                      <div className="relative bg-gradient-to-br from-white to-gray-50 rounded-3xl p-6 shadow-2xl border border-gray-100">
-                        <img 
-                          src={category.image} 
-                          alt={category.title}
-                          className="w-full h-80 object-cover rounded-2xl transition-transform duration-700 group-hover:scale-105"
-                        />
-                        
-                        {/* Floating icon badge */}
-                        <div className="absolute -bottom-6 -right-6 p-4 bg-white rounded-2xl shadow-2xl border border-gray-100 group-hover:scale-110 transition-all duration-300">
-                          <div className={`text-${category.color}-600`}>
-                            {category.icon}
-                          </div>
-                        </div>
+                {/* Features List */}
+                <div className="space-y-3">
+                  {category.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center">
+                      <div className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mr-3 bg-${category.color}-100`}>
+                        <CheckCircle className="w-4 h-4 text-white" style={{ color: `var(--${category.color}-600)` }} />
                       </div>
+                      <span className="text-gray-800 font-medium">
+                        {feature}
+                      </span>
                     </div>
-                  </div>
+                  ))}
+                </div>
 
-                  {/* Content Section */}
-                  <div className={`space-y-8 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                    <div>
-                      <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                        {category.title}
-                      </h3>
-                      <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                        {category.description}
-                      </p>
-                    </div>
-
-                    {/* Feature list */}
-                    <div className="space-y-4">
-                      {category.features.map((feature, featureIndex) => (
-                        <div 
-                          key={featureIndex} 
-                          className="flex items-center group/item"
-                        >
-                          <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover/item:scale-110 transition-all duration-300 bg-gradient-to-br from-${category.color}-500 to-${category.color}-600`}>
-                            <CheckCircle className="w-5 h-5 text-white" />
-                          </div>
-                          <span className="text-lg font-semibold text-gray-800 group-hover/item:text-talentpool-dark transition-colors duration-300">
-                            {feature}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* CTA Button */}
-                    <div className="pt-4">
-                      <button className={`group/btn inline-flex items-center px-8 py-4 text-white font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-gradient-to-r from-${category.color}-500 to-${category.color}-600 hover:from-${category.color}-600 hover:to-${category.color}-700`}>
-                        <span>Learn More</span>
-                        <ArrowRight className="w-5 h-5 ml-3 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                      </button>
-                    </div>
-                  </div>
+                {/* Learn More Button */}
+                <div className="mt-6 text-center">
+                  <button className={`inline-flex items-center px-6 py-3 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-${category.color}-600 hover:bg-${category.color}-700`}>
+                    <span>Learn More</span>
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </button>
                 </div>
               </div>
             ))}
@@ -257,40 +194,53 @@ const Features: React.FC = () => {
             </p>
           </div>
 
-          {/* Integration Categories */}
-          <div className="space-y-12">
-            {integrationCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
-                <div className="flex items-center mb-8">
-                  <div className="p-3 bg-gray-50 rounded-xl mr-4">
-                    {category.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900">{category.title}</h3>
-                    <p className="text-gray-600">{category.description}</p>
-                  </div>
-                </div>
+          {/* Creative Logo Display */}
+          <div className="bg-white rounded-3xl p-12 shadow-lg border border-gray-100 relative overflow-hidden">
+            {/* Background decoration */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full blur-3xl translate-x-32 -translate-y-32"></div>
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-green-400 to-blue-400 rounded-full blur-3xl -translate-x-24 translate-y-24"></div>
+            </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                  {category.integrations.map((integration, integrationIndex) => (
-                    <div key={integrationIndex} className="group">
-                      <div className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:bg-white border border-gray-100 hover:border-talentpool-dark">
-                        <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                          <img 
-                            src={integration.logo} 
-                            alt={integration.name}
-                            className="w-12 h-12 object-contain group-hover:scale-110 transition-transform"
-                          />
-                        </div>
-                        <h4 className="font-semibold text-gray-900 text-sm group-hover:text-talentpool-dark transition-colors">
-                          {integration.name}
-                        </h4>
+            {/* Floating logos in creative arrangement */}
+            <div className="relative">
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+                {integrations.map((integration, index) => (
+                  <div key={index} className="group relative">
+                    <div className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:bg-white border border-gray-100 hover:border-talentpool-dark transform hover:-translate-y-2">
+                      <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                        <img 
+                          src={integration.logo} 
+                          alt={integration.name}
+                          className="w-12 h-12 object-contain group-hover:scale-110 transition-transform filter grayscale group-hover:grayscale-0"
+                        />
                       </div>
+                      <h4 className="font-semibold text-gray-900 text-sm group-hover:text-talentpool-dark transition-colors">
+                        {integration.name}
+                      </h4>
                     </div>
-                  ))}
+                  </div>
+                ))}
+              </div>
+
+              {/* "And More" section */}
+              <div className="mt-12 text-center">
+                <div className="inline-flex items-center space-x-4 bg-gradient-to-r from-talentpool-light to-blue-100 rounded-2xl px-8 py-4">
+                  <div className="flex -space-x-2">
+                    <div className="w-8 h-8 bg-gray-300 rounded-full border-2 border-white flex items-center justify-center">
+                      <span className="text-xs font-bold text-gray-600">+</span>
+                    </div>
+                    <div className="w-8 h-8 bg-gray-400 rounded-full border-2 border-white flex items-center justify-center">
+                      <span className="text-xs font-bold text-white">+</span>
+                    </div>
+                    <div className="w-8 h-8 bg-gray-500 rounded-full border-2 border-white flex items-center justify-center">
+                      <span className="text-xs font-bold text-white">+</span>
+                    </div>
+                  </div>
+                  <span className="text-lg font-bold text-gray-800">and 50+ more integrations</span>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
 
           {/* Integration CTA */}
