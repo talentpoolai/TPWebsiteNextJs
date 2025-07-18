@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
       name: "GDPR Compliant",
       description: "Data Protection",
       icon: <Lock className="w-6 h-6 text-green-600" />,
-      image: "/images/Filecamp-gdpr.png",
+      image: "/images/logo-gdpr@2x.webp",
       verified: true
     },
     {
