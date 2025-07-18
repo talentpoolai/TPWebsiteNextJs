@@ -2,24 +2,24 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 const { marked } = require('marked');
-const fetch = global.fetch || ((...args) => import('node-fetch').then(({default: fetch}) => fetch(...args)));
+const fetch = global.fetch || ((...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args)));
 
 // GitHub repo details
-const GITHUB_OWNER = "talentpoolai"; // e.g., "tejas-shimpi"
-const GITHUB_REPO = "TPblogs";    // e.g., "blog-content"
-const GITHUB_BRANCH = "main";                 // or "master"
+const GITHUB_OWNER = "talentpoolai";
+const GITHUB_REPO = "TPblogs";
+const GITHUB_BRANCH = "main";
 const GITHUB_API_URL = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/content?ref=${GITHUB_BRANCH}`;
 const RAW_BASE_URL = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}`;
 
 // Local paths in Bolt
-const localMarkdownDir = path.join(__dirname, '../content');
+const localMarkdownDir = path.join(__dirname, 'temp_markdown'); // TEMP folder now
 const outputJsonFile = path.join(__dirname, '../src/data/blogIndex.json');
 
 // Utility: calculate reading time
 function calculateReadTime(text) {
   const wordsPerMinute = 200;
   const wordCount = text.split(/\s+/).length;
-  const minutes = Math.ceil(wordCount / wordsPerMinute);
+  const minutes = Math.max(1, Math.ceil(wordCount / wordsPerMinute)); // Always at least 1 min
   return `${minutes} min read`;
 }
 
@@ -46,14 +46,14 @@ async function downloadMarkdownFiles(fileList) {
 
   for (const file of fileList) {
     const rawUrl = `${RAW_BASE_URL}/content/${file}`;
+    console.log(`⬇️ Downloading: ${file}`);
     const res = await fetch(rawUrl);
     if (!res.ok) {
-      console.error(`❌ Failed to download ${file}`);
+      console.error(`❌ Failed to download ${file}: ${res.statusText}`);
       continue;
     }
     const content = await res.text();
     fs.writeFileSync(path.join(localMarkdownDir, file), content, 'utf8');
-    console.log(`✅ Downloaded: ${file}`);
   }
 }
 
@@ -73,7 +73,7 @@ function generateBlogIndex() {
         id: data.id || file.replace('.md', ''),
         title: data.title,
         slug: data.slug || file.replace('.md', ''),
-        excerpt: data.excerpt || content.substring(0, 150) + "...",
+        excerpt: data.excerpt || content.substring(0, 150).replace(/\n/g, ' ') + "...",
         content: marked(content),
         author: data.author,
         publishedAt: data.publishedAt,
@@ -91,6 +91,15 @@ function generateBlogIndex() {
   console.log(`✅ blogIndex.json generated with ${posts.length} posts.`);
 }
 
+// Clean up temp markdown folder
+function cleanUpTempFolder() {
+  console.log('🗑️ Cleaning up downloaded markdown files...');
+  if (fs.existsSync(localMarkdownDir)) {
+    fs.rmSync(localMarkdownDir, { recursive: true, force: true });
+    console.log('✅ Temp folder deleted.');
+  }
+}
+
 // Main flow
 async function main() {
   try {
@@ -98,8 +107,10 @@ async function main() {
     await downloadMarkdownFiles(fileList);
     generateBlogIndex();
   } catch (err) {
-    console.error(err);
+    console.error('🚨 Error:', err);
     process.exit(1);
+  } finally {
+    cleanUpTempFolder();
   }
 }
 
