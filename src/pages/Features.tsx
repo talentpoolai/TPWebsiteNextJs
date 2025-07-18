@@ -89,11 +89,9 @@ const Features: React.FC = () => {
     { name: "Microsoft Teams", logo: "/images/5.png" },
     { name: "Google Workspace", logo: "/images/6.png" },
     { name: "Zoom", logo: "/images/7.png" },
-    { name: "Outlook", logo: "/images/8.png" },
     { name: "DocuSign", logo: "/images/9.png" },
     { name: "BambooHR", logo: "/images/10.png" },
     { name: "Workday", logo: "/images/11.png" },
-    { name: "Greenhouse", logo: "/images/12.png" }
   ];
 
   return (
