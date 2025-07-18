@@ -110,10 +110,6 @@ const Footer: React.FC = () => {
                 <span>End-to-End Encryption</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Award className="w-4 h-4 text-purple-400" />
-                <span>ISO 27001 Aligned</span>
-              </div>
-              <div className="flex items-center space-x-2">
                 <Shield className="w-4 h-4 text-orange-400" />
                 <span>Regular Penetration Testing</span>
               </div>
