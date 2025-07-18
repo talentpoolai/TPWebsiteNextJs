@@ -99,33 +99,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
             
-            {/* Additional Security Features */}
-            <div className="flex flex-wrap justify-center gap-6 text-xs text-gray-400">
-              <div className="flex items-center space-x-2">
-                <Shield className="w-4 h-4 text-blue-400" />
-                <span>Bank-Grade Security</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Lock className="w-4 h-4 text-green-400" />
-                <span>End-to-End Encryption</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Award className="w-4 h-4 text-purple-400" />
-                <span>ISO 27001 Aligned</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Shield className="w-4 h-4 text-orange-400" />
-                <span>Regular Penetration Testing</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Lock className="w-4 h-4 text-red-400" />
-                <span>Zero Trust Architecture</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Award className="w-4 h-4 text-indigo-400" />
-                <span>Multi-Factor Authentication</span>
-              </div>
-            </div>
+            
           </div>
         </div>
 
