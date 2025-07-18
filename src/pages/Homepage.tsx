@@ -2,6 +2,7 @@ import React from 'react';
 import { BlogPost } from '../../lib/blog';
 import { ArrowRight, CheckCircle, Star, Users, TrendingUp, Target, Zap, ChevronLeft, ChevronRight } from 'lucide-react';
 import PipeDriveForm from '../components/PipeDriveForm';
+import blogIndex from '../data/blogIndex.json';
 
 interface HomepageProps {
   featuredPosts: BlogPost[];
@@ -136,26 +137,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
   ];
 
   // Use the first 3 featured posts or fallback to default content
-  const displayPosts = featuredPosts.length > 0 ? featuredPosts.slice(0, 3) : [
-    {
-      title: "The Future of AI-Powered Recruiting",
-      excerpt: "Discover how artificial intelligence is transforming the recruitment landscape and what it means for your hiring strategy.",
-      featuredImage: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&dpr=1",
-      slug: "ai-powered-recruiting"
-    },
-    {
-      title: "Building Inclusive Hiring Practices",
-      excerpt: "Learn proven strategies to remove bias from your recruitment process and build more diverse, high-performing teams.",
-      featuredImage: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&dpr=1",
-      slug: "inclusive-hiring-practices"
-    },
-    {
-      title: "Scaling Your Tech Team in 2024",
-      excerpt: "Essential tips and best practices for rapidly growing your engineering team while maintaining quality and culture.",
-      featuredImage: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&dpr=1",
-      slug: "scaling-tech-team-2024"
-    },
-  ];
+  const displayPosts = featuredPosts.length > 0 ? featuredPosts.slice(0, 3) : (blogIndex as any[]).slice(0, 3);
 
   const companyLogos = [
     { src: "/1.png", alt: "Company 1" },
@@ -756,21 +738,42 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
             {displayPosts.map((post, index) => (
               <article key={index} className="bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
                 <div className="aspect-w-16 aspect-h-9 bg-gray-200">
-                  <img 
-                    src={post.featuredImage} 
-                    alt={post.title}
-                    className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform"
-                  />
+                  {post.featuredImage ? (
+                    <img 
+                      src={post.featuredImage} 
+                      alt={post.title}
+                      className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform"
+                      onError={(e) => {
+                        e.currentTarget.src = 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&dpr=1';
+                      }}
+                    />
+                  ) : (
+                    <div className="w-full h-40 sm:h-48 bg-gradient-to-br from-talentpool-light to-gray-100 flex items-center justify-center">
+                      <div className="text-gray-500 text-center">
+                        <div className="text-4xl mb-2">📝</div>
+                        <div className="text-sm">Blog Post</div>
+                      </div>
+                    </div>
+                  )}
                 </div>
                 <div className="p-4 sm:p-6">
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3 group-hover:text-talentpool-dark transition-colors">
-                    {post.title}
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3 group-hover:text-talentpool-dark transition-colors line-clamp-2 h-12 sm:h-14 leading-6 sm:leading-7">
+                    {post.title || 'Untitled Post'}
                   </h3>
-                  <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">{post.excerpt}</p>
-                  <button className="text-talentpool-dark font-medium hover:text-talentpool-medium transition-colors flex items-center text-sm">
+                  <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base line-clamp-3 h-16 leading-5">
+                    {post.excerpt || 'No description available.'}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <button className="text-talentpool-dark font-medium hover:text-talentpool-medium transition-colors flex items-center text-sm">
                     Read More
                     <ArrowRight className="w-4 h-4 ml-1" />
                   </button>
+                    {post.category && (
+                      <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+                        {post.category}
+                      </span>
+                    )}
+                  </div>
                 </div>
               </article>
             ))}
