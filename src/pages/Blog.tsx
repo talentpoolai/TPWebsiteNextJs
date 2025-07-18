@@ -160,18 +160,6 @@ const Blog = () => {
             </div>
           ) : (
             <>
-              {/* Results count */}
-              <div className="text-center mb-8">
-                <p className="text-gray-600">
-                  Showing {startIndex + 1}-{Math.min(endIndex, totalPosts)} of {totalPosts} articles
-                  {selectedCategory !== 'All' && ` in ${selectedCategory}`}
-                  {searchTerm && ` matching "${searchTerm}"`}
-                </p>
-                <p className="text-sm text-gray-500 mt-1">
-                  Page {currentPage} of {totalPages}
-                </p>
-              </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 {currentPosts.map((post) => (
                 <article key={post.slug} className="group">
@@ -217,6 +205,18 @@ const Blog = () => {
                   </Link>
                 </article>
               ))}
+              </div>
+
+              {/* Results count */}
+              <div className="text-center mb-8">
+                <p className="text-gray-600">
+                  Showing {startIndex + 1}-{Math.min(endIndex, totalPosts)} of {totalPosts} articles
+                  {selectedCategory !== 'All' && ` in ${selectedCategory}`}
+                  {searchTerm && ` matching "${searchTerm}"`}
+                </p>
+                <p className="text-sm text-gray-500 mt-1">
+                  Page {currentPage} of {totalPages}
+                </p>
               </div>
               
               {/* Pagination */}
