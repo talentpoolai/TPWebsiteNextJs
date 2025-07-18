@@ -582,7 +582,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                     className="h-16 w-auto filter grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-                <p className="text-gray-900 font-semibold mb-6 text-lg leading-relaxed">
+                <p className="text-gray-900 font-semibold mb-6 text-lg leading-relaxed line-clamp-3 h-20">
                 Streamlined workflows to reduce timelines by 3x.
               </p>
                 <div className="flex items-center justify-between">
@@ -602,7 +602,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                     className="h-16 w-auto filter grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-                <p className="text-gray-900 font-semibold mb-6 text-lg leading-relaxed">
+                <p className="text-gray-900 font-semibold mb-6 text-lg leading-relaxed line-clamp-3 h-20">
                 "With Talentpool, every person at our company has an AI assistant."
               </p>
                 <div className="flex items-center justify-between">
@@ -622,7 +622,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                     className="h-16 w-auto filter grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-                <p className="text-gray-900 font-semibold mb-6 text-lg leading-relaxed">
+                <p className="text-gray-900 font-semibold mb-6 text-lg leading-relaxed line-clamp-3 h-20">
                 "Talentpool understands that you can solve a lot of problems with one tool."
               </p>
                 <div className="flex items-center justify-between">
@@ -642,7 +642,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                     className="h-16 w-auto filter grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-                <p className="text-gray-900 font-semibold mb-6 text-lg leading-relaxed">
+                <p className="text-gray-900 font-semibold mb-6 text-lg leading-relaxed line-clamp-3 h-20">
                 "Talentpool has been the most powerful and impactful way to streamline our workflow."
               </p>
                 <div className="flex items-center justify-between">
@@ -662,7 +662,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                     className="h-16 w-auto filter grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-                <p className="text-gray-900 font-semibold mb-6 text-lg leading-relaxed">
+                <p className="text-gray-900 font-semibold mb-6 text-lg leading-relaxed line-clamp-3 h-20">
                 "Someone could join our company and onboard themselves without ever speaking to anybody."
               </p>
                 <div className="flex items-center justify-between">
@@ -682,7 +682,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                     className="h-16 w-auto filter grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-                <p className="text-gray-900 font-semibold mb-6 text-lg leading-relaxed">
+                <p className="text-gray-900 font-semibold mb-6 text-lg leading-relaxed line-clamp-3 h-20">
                   Transforming enterprise hiring with AI-powered solutions.
                 </p>
                 <div className="flex items-center justify-between">

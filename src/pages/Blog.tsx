@@ -199,7 +199,7 @@ const Blog = () => {
                         <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-talentpool-dark transition-colors line-clamp-2 h-14 leading-7">
                           {post.title || 'Untitled Post'}
                         </h3>
-                        <p className="text-gray-600 line-clamp-3 h-18 leading-6">{post.excerpt}</p>
+                        <p className="text-gray-600 line-clamp-3 h-18 leading-6">{post.excerpt || 'No description available.'}</p>
                       </div>
                     </div>
                   </Link>
