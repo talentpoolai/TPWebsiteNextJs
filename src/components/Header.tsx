@@ -17,7 +17,6 @@ const Header: React.FC = () => {
       name: 'Benefits', 
       href: '/benefits'
     },
-    { name: 'Pricing', href: '/pricing' },
     { 
       name: 'Resources', 
       href: '/resources',
@@ -39,6 +38,7 @@ const Header: React.FC = () => {
         }
       ]
     },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'About Us', href: '/about' },
   ];
 
