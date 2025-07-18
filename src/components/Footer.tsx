@@ -126,6 +126,8 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Footer Links */}
+        <div className="border-t border-gray-700 pt-6 mt-8">
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company */}
           <div>
@@ -223,6 +225,7 @@ const Footer: React.FC = () => {
               <a href="#" className="hover:text-gray-300 transition-colors">Trust Center</a>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </footer>
