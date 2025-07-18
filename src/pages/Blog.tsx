@@ -99,11 +99,23 @@ const Blog = () => {
                 <article key={post.slug} className="group">
                   <Link to={`/blog/${post.slug}`} className="block">
                     <div className="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition-shadow">
-                      <img 
-                        src={post.featuredImage} 
-                        alt={post.title}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform"
-                      />
+                      {post.featuredImage ? (
+                        <img 
+                          src={post.featuredImage} 
+                          alt={post.title}
+                          className="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+                          onError={(e) => {
+                            e.currentTarget.src = 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&dpr=1';
+                          }}
+                        />
+                      ) : (
+                        <div className="w-full h-48 bg-gradient-to-br from-talentpool-light to-gray-100 flex items-center justify-center">
+                          <div className="text-gray-500 text-center">
+                            <div className="text-4xl mb-2">📝</div>
+                            <div className="text-sm">Blog Post</div>
+                          </div>
+                        </div>
+                      )}
                       <div className="p-6">
                         <div className="flex items-center space-x-4 mb-4">
                           <span className="inline-block px-3 py-1 bg-talentpool-light text-talentpool-dark text-sm font-medium rounded-full">
@@ -111,12 +123,15 @@ const Blog = () => {
                           </span>
                           <div className="flex items-center text-gray-500 text-sm">
                             <Clock className="w-4 h-4 mr-1" />
-                            {new Date(post.publishedAt).toLocaleDateString()}
+                            {post.publishedAt && !isNaN(new Date(post.publishedAt).getTime()) 
+                              ? new Date(post.publishedAt).toLocaleDateString()
+                              : 'Recent'
+                            }
                           </div>
                         </div>
                         
                         <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-talentpool-dark transition-colors line-clamp-2 h-14 leading-7">
-                          {post.title}
+                          {post.title || 'Untitled Post'}
                         </h3>
                         <p className="text-gray-600 line-clamp-3 h-18 leading-6">{post.excerpt}</p>
                       </div>
