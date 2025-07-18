@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
                 <div className="flex flex-col items-center text-center">
                   {/* Badge Image */}
                   <img 
-                    src="/images/uploads/678a6d6fc5825e05c17510b8_678a6d497673e6547fd00d40_aicpa-soc-logo-PNG.png" 
+                    src="/images/678a6d6fc5825e05c17510b8_678a6d497673e6547fd00d40_aicpa-soc-logo-PNG.png" 
                     alt="SOC 2 Type II"
                     className="w-24 h-24 object-contain group-hover:scale-105 transition-transform"
                   />
