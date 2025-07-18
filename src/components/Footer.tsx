@@ -30,25 +30,6 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Compliance Badges */}
-        <div className="mb-8 text-center">
-          <p className="text-gray-400 text-sm mb-4">Enterprise-Grade Security & Compliance</p>
-          <div className="flex justify-center items-center space-x-8">
-            {complianceBadges.map((badge, index) => (
-              <div key={index} className="flex flex-col items-center group">
-                <img 
-                  src={badge.image} 
-                  alt={badge.name}
-                  className="w-12 h-12 object-contain mb-2 opacity-80 group-hover:opacity-100 transition-opacity"
-                />
-                <span className="text-xs text-gray-500 group-hover:text-gray-400 transition-colors">
-                  {badge.name}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
@@ -129,6 +110,27 @@ const Footer: React.FC = () => {
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Mail size={20} />
               </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Compliance Badges */}
+        <div className="mt-8 pt-8 border-t border-gray-800">
+          <div className="text-center">
+            <p className="text-gray-400 text-sm mb-6">Enterprise-Grade Security & Compliance</p>
+            <div className="flex justify-center items-center space-x-12">
+              {complianceBadges.map((badge, index) => (
+                <div key={index} className="flex flex-col items-center group">
+                  <img 
+                    src={badge.image} 
+                    alt={badge.name}
+                    className="w-16 h-16 object-contain mb-3 opacity-80 group-hover:opacity-100 transition-opacity"
+                  />
+                  <span className="text-sm text-gray-500 group-hover:text-gray-400 transition-colors">
+                    {badge.name}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
