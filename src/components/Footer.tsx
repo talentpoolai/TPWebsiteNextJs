@@ -5,21 +5,21 @@ import { Linkedin, Twitter, Mail, Shield, Award, Lock } from 'lucide-react';
 const Footer: React.FC = () => {
   const complianceBadges = [
     {
-      name: "",
+      name: "SOC 2 Type II",
       description: "Security & Availability",
       icon: <Shield className="w-6 h-6 text-blue-600" />,
-      image: "/images/678a6d6fc5825e05c17510b8_678a6d497673e6547fd00d40_aicpa-soc-logo-PNG.png",
+      image: "/images/Symbl.ai-Achieves-SOC-2-Type-2-Certification-removebg-preview.png",
       verified: true
     },
     {
-      name: "",
+      name: "GDPR Compliant",
       description: "Data Protection",
       icon: <Lock className="w-6 h-6 text-green-600" />,
-      image: "/images/logo-gdpr@2x.webp",
+      image: "/images/Filecamp-gdpr.png",
       verified: true
     },
     {
-      name: "",
+      name: "PCI DSS",
       description: "Payment Security",
       icon: <Award className="w-6 h-6 text-purple-600" />,
       image: "/images/pci-dss-1.png",
@@ -30,6 +30,79 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Compliance Section */}
+        <div className="mb-12">
+          <div className="text-center mb-8">
+            <h3 className="text-xl font-semibold text-white mb-2">
+              Enterprise-Grade Security & Compliance
+            </h3>
+            <p className="text-gray-400 text-sm">
+              Your data is protected by industry-leading security standards
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {complianceBadges.map((badge, index) => (
+              <div 
+                key={index}
+                className="group relative bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:shadow-lg"
+              >
+                {/* Verified Badge */}
+                {badge.verified && (
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                )}
+                
+                <div className="flex flex-col items-center text-center">
+                  {/* Badge Image */}
+                  <div className="w-16 h-16 mb-4 flex items-center justify-center bg-white rounded-xl shadow-sm group-hover:scale-105 transition-transform">
+                    <img 
+                      src={badge.image} 
+                      alt={badge.name}
+                      className="w-12 h-12 object-contain"
+                    />
+                  </div>
+                  
+                  {/* Badge Info */}
+                  <h4 className="text-white font-semibold text-sm mb-1">
+                    {badge.name}
+                  </h4>
+                  <p className="text-gray-400 text-xs">
+                    {badge.description}
+                  </p>
+                  
+                  {/* Verification Status */}
+                  <div className="mt-3 flex items-center space-x-1">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span className="text-green-400 text-xs font-medium">Verified</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          {/* Additional Security Info */}
+          <div className="mt-8 text-center">
+            <div className="inline-flex items-center space-x-6 text-xs text-gray-400">
+              <div className="flex items-center space-x-2">
+                <Lock className="w-4 h-4" />
+                <span>256-bit SSL Encryption</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Shield className="w-4 h-4" />
+                <span>Regular Security Audits</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Award className="w-4 h-4" />
+                <span>ISO 27001 Aligned</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
@@ -110,65 +183,6 @@ const Footer: React.FC = () => {
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Mail size={20} />
               </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Compliance Section */}
-        <div className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-2xl p-8 mb-12">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-3">
-              Enterprise-Grade Security & Compliance
-            </h3>
-            <p className="text-gray-300 text-lg">
-              Your data is protected by industry-leading security standards
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            {complianceBadges.map((badge, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 group">
-                <div className="flex items-center justify-center mb-4">
-                  <img 
-                    src={badge.image} 
-                    alt={badge.name}
-                    className="h-16 w-auto object-contain filter brightness-0 invert group-hover:scale-110 transition-transform"
-                  />
-                </div>
-                <div className="text-center">
-                  <div className="flex items-center justify-center mb-2">
-                    {badge.icon}
-                    <span className="ml-2 text-sm font-semibold text-green-400">Verified</span>
-                  </div>
-                  <h4 className="text-white font-bold text-lg mb-2">{badge.description}</h4>
-                  {badge.verified && (
-                    <div className="flex items-center justify-center">
-                      <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-                      <span className="text-green-400 text-sm font-medium">Active Certification</span>
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Security Metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div>
-              <div className="text-2xl font-bold text-white mb-1">256-bit</div>
-              <div className="text-gray-400 text-sm">SSL Encryption</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-white mb-1">99.9%</div>
-              <div className="text-gray-400 text-sm">Uptime SLA</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-white mb-1">24/7</div>
-              <div className="text-gray-400 text-sm">Security Monitoring</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-white mb-1">Annual</div>
-              <div className="text-gray-400 text-sm">Security Audits</div>
             </div>
           </div>
         </div>
