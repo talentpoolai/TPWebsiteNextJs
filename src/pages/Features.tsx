@@ -185,20 +185,15 @@ const Features: React.FC = () => {
 
             {/* Floating logos in creative arrangement */}
             <div className="relative">
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+              <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center">
                 {integrations.map((integration, index) => (
-                  <div key={index} className="group relative">
-                    <div className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:bg-white border border-gray-100 hover:border-talentpool-dark transform hover:-translate-y-2">
-                      <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                        <img 
-                          src={integration.logo} 
-                          alt={integration.name}
-                          className="w-12 h-12 object-contain group-hover:scale-110 transition-transform filter grayscale group-hover:grayscale-0"
-                        />
-                      </div>
-                      <h4 className="font-semibold text-gray-900 text-sm group-hover:text-talentpool-dark transition-colors">
-                        {integration.name}
-                      </h4>
+                  <div key={index} className="group">
+                    <div className="aspect-square bg-white rounded-2xl p-4 hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-talentpool-dark transform hover:-translate-y-2 hover:scale-105">
+                      <img 
+                        src={integration.logo} 
+                        alt={integration.name}
+                        className="w-full h-full object-contain group-hover:scale-110 transition-transform filter grayscale group-hover:grayscale-0"
+                      />
                     </div>
                   </div>
                 ))}
@@ -206,7 +201,7 @@ const Features: React.FC = () => {
 
               {/* "And More" section */}
               <div className="mt-12 text-center">
-                <div className="inline-flex items-center space-x-4 bg-gradient-to-r from-talentpool-light to-blue-100 rounded-2xl px-8 py-4">
+                <div className="inline-flex items-center space-x-4 bg-gradient-to-r from-talentpool-light to-blue-100 rounded-2xl px-8 py-6">
                   <div className="flex -space-x-2">
                     <div className="w-8 h-8 bg-gray-300 rounded-full border-2 border-white flex items-center justify-center">
                       <span className="text-xs font-bold text-gray-600">+</span>
@@ -218,7 +213,7 @@ const Features: React.FC = () => {
                       <span className="text-xs font-bold text-white">+</span>
                     </div>
                   </div>
-                  <span className="text-lg font-bold text-gray-800">and 50+ more integrations</span>
+                  <span className="text-xl font-bold text-gray-800">and 50+ more integrations</span>
                 </div>
               </div>
             </div>
