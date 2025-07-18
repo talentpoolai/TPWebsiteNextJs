@@ -8,21 +8,21 @@ const Footer: React.FC = () => {
       name: "SOC 2 Type II",
       description: "Security & Availability",
       icon: <Shield className="w-6 h-6 text-blue-600" />,
-      image: "/images/Symbl.ai-Achieves-SOC-2-Type-2-Certification-removebg-preview.png",
+      image: "/images/uploads/678a6d6fc5825e05c17510b8_678a6d497673e6547fd00d40_aicpa-soc-logo-PNG.png",
       verified: true
     },
     {
       name: "GDPR Compliant",
       description: "Data Protection",
       icon: <Lock className="w-6 h-6 text-green-600" />,
-      image: "/images/Filecamp-gdpr.png",
+      image: "/images/uploads/logo-gdpr@2x.webp",
       verified: true
     },
     {
       name: "PCI DSS",
       description: "Payment Security",
       icon: <Award className="w-6 h-6 text-purple-600" />,
-      image: "/images/pci-dss-1.png",
+      image: "/images/uploads/pci-dss-1.png",
       verified: true
     }
   ];
@@ -116,17 +116,17 @@ const Footer: React.FC = () => {
 
         {/* Compliance Badges */}
         <div className="mt-8 pt-8 border-t border-gray-800">
-          <div className="text-left">
-            <p className="text-gray-400 text-sm mb-6">Enterprise-Grade Security & Compliance</p>
-            <div className="flex items-center space-x-8">
+          <div className="text-center">
+            <h3 className="text-white text-lg font-bold mb-8">Enterprise-Grade Security & Compliance</h3>
+            <div className="flex items-center justify-center space-x-12">
               {complianceBadges.map((badge, index) => (
-                <div key={index} className="flex flex-col items-center group">
+                <div key={index} className="flex flex-col items-center group cursor-pointer">
                   <img 
                     src={badge.image} 
                     alt={badge.name}
-                    className="w-20 h-20 object-contain mb-3 opacity-80 group-hover:opacity-100 transition-opacity"
+                    className="w-24 h-24 object-contain mb-4 opacity-90 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
                   />
-                  <span className="text-sm text-gray-500 group-hover:text-gray-400 transition-colors">
+                  <span className="text-sm font-semibold text-gray-300 group-hover:text-white transition-colors">
                     {badge.name}
                   </span>
                 </div>
