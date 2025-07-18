@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Clock, Search } from 'lucide-react';
+import { Calendar, Clock, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 import blogIndex from '../data/blogIndex.json';
 
 interface BlogPost {
@@ -49,15 +49,61 @@ const Blog = () => {
   const startIndex = (currentPage - 1) * postsPerPage;
   const endIndex = startIndex + postsPerPage;
   const currentPosts = filteredPosts.slice(startIndex, endIndex);
-  const hasMorePosts = currentPage < totalPages;
 
   // Reset to first page when search or category changes
   useEffect(() => {
     setCurrentPage(1);
   }, [searchTerm, selectedCategory]);
 
-  const loadMorePosts = () => {
-    setCurrentPage(prev => prev + 1);
+  const goToPage = (page: number) => {
+    setCurrentPage(page);
+    // Scroll to top of blog section
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const nextPage = () => {
+    if (currentPage < totalPages) {
+      goToPage(currentPage + 1);
+    }
+  };
+
+  const prevPage = () => {
+    if (currentPage > 1) {
+      goToPage(currentPage - 1);
+    }
+  };
+
+  // Generate page numbers to show
+  const getPageNumbers = () => {
+    const pages = [];
+    const maxVisiblePages = 5;
+    
+    if (totalPages <= maxVisiblePages) {
+      // Show all pages if total is small
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      // Show smart pagination
+      if (currentPage <= 3) {
+        // Show first 5 pages
+        for (let i = 1; i <= 5; i++) {
+          pages.push(i);
+        }
+      } else if (currentPage >= totalPages - 2) {
+        // Show last 5 pages
+        for (let i = totalPages - 4; i <= totalPages; i++) {
+          pages.push(i);
+        }
+      } else {
+        // Show current page and 2 on each side
+        for (let i = currentPage - 2; i <= currentPage + 2; i++) {
+          pages.push(i);
+        }
+      }
+    }
+    
+    return pages;
   };
 
   return (
@@ -117,9 +163,12 @@ const Blog = () => {
               {/* Results count */}
               <div className="text-center mb-8">
                 <p className="text-gray-600">
-                  Showing {Math.min(currentPage * postsPerPage, totalPosts)} of {totalPosts} articles
+                  Showing {startIndex + 1}-{Math.min(endIndex, totalPosts)} of {totalPosts} articles
                   {selectedCategory !== 'All' && ` in ${selectedCategory}`}
                   {searchTerm && ` matching "${searchTerm}"`}
+                </p>
+                <p className="text-sm text-gray-500 mt-1">
+                  Page {currentPage} of {totalPages}
                 </p>
               </div>
               
@@ -170,27 +219,80 @@ const Blog = () => {
               ))}
               </div>
               
-              {/* Load More Button */}
-              {hasMorePosts && (
-                <div className="text-center">
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div className="flex items-center justify-center space-x-2">
+                  {/* Previous Button */}
                   <button
-                    onClick={loadMorePosts}
-                    className="bg-talentpool-dark text-white px-8 py-4 rounded-xl font-semibold hover:bg-talentpool-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                    onClick={prevPage}
+                    disabled={currentPage === 1}
+                    className={`flex items-center px-4 py-2 rounded-lg font-medium transition-colors ${
+                      currentPage === 1
+                        ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                        : 'bg-white text-gray-700 hover:bg-talentpool-light hover:text-talentpool-dark border border-gray-300'
+                    }`}
                   >
-                    Load More Articles
+                    <ChevronLeft className="w-4 h-4 mr-1" />
+                    Previous
                   </button>
-                  <p className="text-gray-500 text-sm mt-4">
-                    {totalPosts - (currentPage * postsPerPage)} more articles available
-                  </p>
-                </div>
-              )}
-              
-              {/* End message when all posts are loaded */}
-              {!hasMorePosts && totalPosts > postsPerPage && (
-                <div className="text-center">
-                  <div className="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-600 rounded-xl">
-                    <span>You've reached the end of our articles</span>
+
+                  {/* Page Numbers */}
+                  <div className="flex items-center space-x-1">
+                    {/* First page if not visible */}
+                    {currentPage > 3 && totalPages > 5 && (
+                      <>
+                        <button
+                          onClick={() => goToPage(1)}
+                          className="px-3 py-2 rounded-lg font-medium bg-white text-gray-700 hover:bg-talentpool-light hover:text-talentpool-dark border border-gray-300 transition-colors"
+                        >
+                          1
+                        </button>
+                        <span className="px-2 text-gray-500">...</span>
+                      </>
+                    )}
+
+                    {/* Visible page numbers */}
+                    {getPageNumbers().map((page) => (
+                      <button
+                        key={page}
+                        onClick={() => goToPage(page)}
+                        className={`px-3 py-2 rounded-lg font-medium transition-colors ${
+                          page === currentPage
+                            ? 'bg-talentpool-dark text-white'
+                            : 'bg-white text-gray-700 hover:bg-talentpool-light hover:text-talentpool-dark border border-gray-300'
+                        }`}
+                      >
+                        {page}
+                      </button>
+                    ))}
+
+                    {/* Last page if not visible */}
+                    {currentPage < totalPages - 2 && totalPages > 5 && (
+                      <>
+                        <span className="px-2 text-gray-500">...</span>
+                        <button
+                          onClick={() => goToPage(totalPages)}
+                          className="px-3 py-2 rounded-lg font-medium bg-white text-gray-700 hover:bg-talentpool-light hover:text-talentpool-dark border border-gray-300 transition-colors"
+                        >
+                          {totalPages}
+                        </button>
+                      </>
+                    )}
                   </div>
+
+                  {/* Next Button */}
+                  <button
+                    onClick={nextPage}
+                    disabled={currentPage === totalPages}
+                    className={`flex items-center px-4 py-2 rounded-lg font-medium transition-colors ${
+                      currentPage === totalPages
+                        ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                        : 'bg-white text-gray-700 hover:bg-talentpool-light hover:text-talentpool-dark border border-gray-300'
+                    }`}
+                  >
+                    Next
+                    <ChevronRight className="w-4 h-4 ml-1" />
+                  </button>
                 </div>
               )}
             </>
