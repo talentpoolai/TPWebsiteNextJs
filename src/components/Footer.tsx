@@ -118,10 +118,6 @@ const Footer: React.FC = () => {
                 <span>Regular Penetration Testing</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Lock className="w-4 h-4 text-red-400" />
-                <span>Zero Trust Architecture</span>
-              </div>
-              <div className="flex items-center space-x-2">
                 <Award className="w-4 h-4 text-indigo-400" />
                 <span>Multi-Factor Authentication</span>
               </div>
