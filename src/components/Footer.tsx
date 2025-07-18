@@ -31,12 +31,6 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Compliance Section */}
-        <div className="mb-12">
-          <div className="text-center mb-8">
-            <h3 className="text-xl font-semibold text-white mb-2">
-              Enterprise-Grade Security & Compliance
-            </h3>
-            <p className="text-gray-400 text-sm">
               Your data is protected by industry-leading security standards
             </p>
           </div>
@@ -47,12 +41,6 @@ const Footer: React.FC = () => {
                 key={index}
                 className="group relative bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:shadow-lg"
               >
-                {/* Verified Badge */}
-                {badge.verified && (
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
                   </div>
                 )}
                 
@@ -63,12 +51,6 @@ const Footer: React.FC = () => {
                     alt={badge.name}
                     className="w-20 h-20 object-contain group-hover:scale-105 transition-transform mb-3"
                   />
-                  <h4 className="text-lg font-semibold text-white mt-4 mb-2">
-                    {badge.name}
-                  </h4>
-                  <p className="text-gray-400 text-sm">
-                    {badge.description}
-                  </p>
                 </div>
               </div>
             ))}
