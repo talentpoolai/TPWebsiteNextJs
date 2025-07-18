@@ -62,64 +62,77 @@ const Footer: React.FC = () => {
                     src="/images/uploads/678a6d6fc5825e05c17510b8_678a6d497673e6547fd00d40_aicpa-soc-logo-PNG.png" 
                     alt="SOC 2 Type II"
                     className="w-24 h-24 object-contain group-hover:scale-105 transition-transform"
+                  />
+                  <h4 className="text-lg font-semibold text-white mt-4 mb-2">
                     {badge.name}
                   </h4>
-                <div className="flex flex-wrap justify-center gap-6 text-xs text-gray-400">
-                  <div className="flex items-center space-x-2">
-                    <Shield className="w-4 h-4 text-blue-400" />
-                    <span>Bank-Grade Security</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Lock className="w-4 h-4 text-green-400" />
-                    <span>End-to-End Encryption</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Award className="w-4 h-4 text-purple-400" />
-                    <span>ISO 27001 Aligned</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Shield className="w-4 h-4 text-orange-400" />
-                    <span>Regular Penetration Testing</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Lock className="w-4 h-4 text-red-400" />
-                    <span>Zero Trust Architecture</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Award className="w-4 h-4 text-indigo-400" />
-                    <span>Multi-Factor Authentication</span>
-                  </div>
+                  <p className="text-gray-400 text-sm">
+                    {badge.description}
+                  </p>
                 </div>
+              </div>
+            ))}
+          </div>
+          
+          {/* Enhanced Security Information */}
+          <div className="border-t border-gray-700 pt-6 mt-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-6">
+              <div className="flex flex-col items-center">
+                <Lock className="w-6 h-6 text-blue-400 mb-2" />
+                <div className="text-white font-bold text-lg">256-bit</div>
+                <div className="text-gray-400 text-xs">SSL Encryption</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <Shield className="w-6 h-6 text-green-400 mb-2" />
+                <div className="text-white font-bold text-lg">99.9%</div>
+                <div className="text-gray-400 text-xs">Uptime SLA</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <Award className="w-6 h-6 text-purple-400 mb-2" />
+                <div className="text-white font-bold text-lg">24/7</div>
+                <div className="text-gray-400 text-xs">Security Monitoring</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <Lock className="w-6 h-6 text-orange-400 mb-2" />
+                <div className="text-white font-bold text-lg">Annual</div>
+                <div className="text-gray-400 text-xs">Security Audits</div>
+              </div>
+            </div>
+            
+            {/* Additional Security Features */}
+            <div className="flex flex-wrap justify-center gap-6 text-xs text-gray-400">
+              <div className="flex items-center space-x-2">
+                <Shield className="w-4 h-4 text-blue-400" />
+                <span>Bank-Grade Security</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Lock className="w-4 h-4 text-green-400" />
+                <span>End-to-End Encryption</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Award className="w-4 h-4 text-purple-400" />
+                <span>ISO 27001 Aligned</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Shield className="w-4 h-4 text-orange-400" />
+                <span>Regular Penetration Testing</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Lock className="w-4 h-4 text-red-400" />
+                <span>Zero Trust Architecture</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Award className="w-4 h-4 text-indigo-400" />
+                <span>Multi-Factor Authentication</span>
               </div>
             </div>
           </div>
-            {/* Enhanced Security Information */}
-            <div className="border-t border-gray-700 pt-6">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-6">
-                <div className="flex flex-col items-center">
-                  <Lock className="w-6 h-6 text-blue-400 mb-2" />
-                  <div className="text-white font-bold text-lg">256-bit</div>
-                  <div className="text-gray-400 text-xs">SSL Encryption</div>
-                </div>
-                <div className="flex flex-col items-center">
-                  <Shield className="w-6 h-6 text-green-400 mb-2" />
-                  <div className="text-white font-bold text-lg">99.9%</div>
-                  <div className="text-gray-400 text-xs">Uptime SLA</div>
-                </div>
-                <div className="flex flex-col items-center">
-                  <Award className="w-6 h-6 text-purple-400 mb-2" />
-                  <div className="text-white font-bold text-lg">24/7</div>
-                  <div className="text-gray-400 text-xs">Security Monitoring</div>
-                </div>
-                <div className="flex flex-col items-center">
-                  <Lock className="w-6 h-6 text-orange-400 mb-2" />
-                  <div className="text-white font-bold text-lg">Annual</div>
-                  <div className="text-gray-400 text-xs">Security Audits</div>
-                </div>
-              </div>
-              
-              {/* Additional Security Features */}
+        </div>
+
+        {/* Footer Links */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Company */}
+          <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <div className="space-y-2">
               <Link to="/about" className="block text-gray-400 hover:text-white transition-colors">
