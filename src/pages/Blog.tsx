@@ -34,8 +34,8 @@ const Blog = () => {
   const filteredPosts = (blogIndex as BlogPost[]).filter((post) =>
     (selectedCategory === "All" || post.category === selectedCategory) &&
     (
-      post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      post.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
+      (post.title || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+      (post.excerpt || '').toLowerCase().includes(searchTerm.toLowerCase())
     )
   );
 
