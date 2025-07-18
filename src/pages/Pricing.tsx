@@ -262,13 +262,13 @@ const Pricing: React.FC = () => {
       features: [
         {
           name: "Test Assessment Integrations",
-          lite: false,
+          lite: "Paid Upgrade",
           pro: "Paid upgrade",
           enterprise: true
         },
         {
           name: "HRMS Integration",
-          lite: false,
+          lite: "Paid Upgrade",
           pro: "Paid upgrade",
           enterprise: true
         }
