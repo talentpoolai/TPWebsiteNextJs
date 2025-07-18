@@ -199,7 +199,7 @@ const Pricing: React.FC = () => {
         },
         {
           name: "Vendor Management",
-          lite: false,
+          lite: "Paid Upgrade",
           pro: "Paid upgrade",
           enterprise: true
         }
