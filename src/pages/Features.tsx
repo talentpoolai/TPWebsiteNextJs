@@ -56,18 +56,6 @@ const Features: React.FC = () => {
       ]
     },
     {
-      icon: <UserPlus className="w-8 h-8 text-teal-600" />,
-      title: "Employee Referral",
-      description: "Tap into valuable employee networks with a transparent referral system to source top talent and shorten time to hire.",
-      color: "teal",
-      gradient: "from-teal-50 to-cyan-50",
-      features: [
-        "Easy Referrals",
-        "Candidate tracking",
-        "Rewards"
-      ]
-    },
-    {
       icon: <Building className="w-8 h-8 text-indigo-600" />,
       title: "Vendor Management",
       description: "Overcome traditional hiring challenges with deep understanding of selection processes and productivity tools to increase team efficiency.",
@@ -164,13 +152,6 @@ const Features: React.FC = () => {
                   ))}
                 </div>
 
-                {/* Learn More Button */}
-                <div className="mt-6 text-center">
-                  <button className={`inline-flex items-center px-6 py-3 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-${category.color}-600 hover:bg-${category.color}-700`}>
-                    <span>Learn More</span>
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
-                </div>
               </div>
             ))}
           </div>
