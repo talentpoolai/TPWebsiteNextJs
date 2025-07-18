@@ -9,42 +9,42 @@ const Pricing: React.FC = () => {
   const addOns = [
     {
       name: "Career Page",
-      price: Math.round(25000 / 12),
+      price: Math.round(30000 / 12),
       description: "Custom branded career page with job listings and application forms",
       icon: <Globe className="w-6 h-6 text-blue-600" />,
       features: ["Custom branding", "Mobile responsive", "SEO optimized", "Analytics tracking"]
     },
     {
       name: "DocuSign Integration",
-      price: Math.round(25000 / 12),
+      price: Math.round(30000 / 12),
       description: "Seamless integration with DocuSign for digital document signing",
       icon: <FileText className="w-6 h-6 text-green-600" />,
       features: ["Digital signatures", "Document templates", "Automated workflows", "Audit trails"]
     },
     {
       name: "Naukri Integration",
-      price: Math.round(25000 / 12),
+      price: Math.round(30000 / 12),
       description: "Direct integration with Naukri.com for job posting and candidate sourcing",
       icon: <Link className="w-6 h-6 text-purple-600" />,
       features: ["Auto job posting", "Resume import", "Application sync", "Performance tracking"]
     },
     {
       name: "Scored Feedback Forms",
-      price: Math.round(10000 / 12),
+      price: Math.round(12000 / 12),
       description: "Advanced feedback forms with scoring and evaluation metrics",
       icon: <MessageSquare className="w-6 h-6 text-orange-600" />,
       features: ["Custom scoring", "Weighted criteria", "Comparative analysis", "Detailed reports"]
     },
     {
       name: "Recommendation Engine",
-      price: Math.round(35000 / 12),
+      price: Math.round(42000 / 12),
       description: "AI-powered recommendation system for better candidate matching",
       icon: <Brain className="w-6 h-6 text-indigo-600" />,
       features: ["ML algorithms", "Predictive matching", "Continuous learning", "Success tracking"]
     },
     {
       name: "Single Sign-On (SSO)",
-      price: Math.round(35000 / 12),
+      price: Math.round(42000 / 12),
       description: "Enterprise SSO integration with your existing identity provider",
       icon: <Lock className="w-6 h-6 text-red-600" />,
       features: ["SAML/OAuth support", "Active Directory", "Multi-factor auth", "User provisioning"]
