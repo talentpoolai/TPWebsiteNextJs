@@ -66,9 +66,7 @@ const Footer: React.FC = () => {
                   <h4 className="text-lg font-semibold text-white mt-4 mb-2">
                     {badge.description}
                   </h4>
-                  <p className="text-gray-400 text-sm">
-                    {badge.description}
-                  </p>
+                  
                 </div>
               </div>
             ))}
