@@ -123,12 +123,6 @@ const Header: React.FC = () => {
                     >
                       {item.name === 'Resources' ? (
                         <div className="w-[520px] bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
-                          {/* Animated Background Pattern */}
-                          <div className="absolute inset-0 opacity-3">
-                            <div className="absolute top-0 left-0 w-32 h-32 bg-talentpool-dark rounded-full -translate-x-16 -translate-y-16"></div>
-                            <div className="absolute bottom-0 right-0 w-24 h-24 bg-talentpool-medium rounded-full translate-x-12 translate-y-12"></div>
-                          </div>
-                          
                           {/* Header with Stats */}
                           <div className="relative bg-gradient-to-br from-gray-50 to-white p-6 border-b border-gray-100">
                             <div className="flex items-center justify-between mb-3">
