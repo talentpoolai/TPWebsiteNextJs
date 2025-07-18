@@ -216,8 +216,8 @@ const Pricing: React.FC = () => {
         },
         {
           name: "Department Hierarchy Management",
-          lite: false,
-          pro: false,
+          lite: true,
+          pro: true,
           enterprise: true
         },
         {
