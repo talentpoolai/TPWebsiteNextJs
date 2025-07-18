@@ -163,7 +163,16 @@ const Blog = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 {currentPosts.map((post) => (
                 <article key={post.slug} className="group">
-                  <Link to={`/blog/${post.slug}`} className="block">
+                  <Link 
+                    to={`/blog/${post.slug}`} 
+                    className="block"
+                    onClick={() => {
+                      // Small delay to ensure navigation happens first
+                      setTimeout(() => {
+                        window.scrollTo(0, 0);
+                      }, 100);
+                    }}
+                  >
                     <div className="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition-shadow">
                       {post.featuredImage ? (
                         <img 

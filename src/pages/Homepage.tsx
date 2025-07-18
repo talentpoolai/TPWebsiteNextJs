@@ -738,7 +738,16 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {displayPosts.map((post, index) => (
               <article key={post.slug || index} className="bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
-                <Link to={`/blog/${post.slug}`} className="block">
+                <Link 
+                  to={`/blog/${post.slug}`} 
+                  className="block"
+                  onClick={() => {
+                    // Small delay to ensure navigation happens first
+                    setTimeout(() => {
+                      window.scrollTo(0, 0);
+                    }, 100);
+                  }}
+                >
                 <div className="aspect-w-16 aspect-h-9 bg-gray-200">
                   {post.featuredImage ? (
                     <img 
