@@ -30,6 +30,8 @@ interface BlogPost {
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [postsPerPage] = useState(9); // Show 9 posts per page (3x3 grid)
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filteredPosts = (blogIndex as BlogPost[]).filter((post) =>
     (selectedCategory === "All" || post.category === selectedCategory) &&
@@ -40,6 +42,23 @@ const Blog = () => {
   );
 
   const blogCategories = ["All", ...Array.from(new Set((blogIndex as BlogPost[]).map(p => p.category)))];
+  
+  // Calculate pagination
+  const totalPosts = filteredPosts.length;
+  const totalPages = Math.ceil(totalPosts / postsPerPage);
+  const startIndex = (currentPage - 1) * postsPerPage;
+  const endIndex = startIndex + postsPerPage;
+  const currentPosts = filteredPosts.slice(startIndex, endIndex);
+  const hasMorePosts = currentPage < totalPages;
+
+  // Reset to first page when search or category changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, selectedCategory]);
+
+  const loadMorePosts = () => {
+    setCurrentPage(prev => prev + 1);
+  };
 
   return (
     <div>
@@ -89,13 +108,23 @@ const Blog = () => {
       {/* Blog Posts */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {filteredPosts.length === 0 ? (
+          {totalPosts === 0 ? (
             <div className="text-center py-12">
               <p className="text-gray-600">No articles found. Try another search or category.</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
+            <>
+              {/* Results count */}
+              <div className="text-center mb-8">
+                <p className="text-gray-600">
+                  Showing {Math.min(currentPage * postsPerPage, totalPosts)} of {totalPosts} articles
+                  {selectedCategory !== 'All' && ` in ${selectedCategory}`}
+                  {searchTerm && ` matching "${searchTerm}"`}
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                {currentPosts.map((post) => (
                 <article key={post.slug} className="group">
                   <Link to={`/blog/${post.slug}`} className="block">
                     <div className="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition-shadow">
@@ -139,7 +168,32 @@ const Blog = () => {
                   </Link>
                 </article>
               ))}
-            </div>
+              </div>
+              
+              {/* Load More Button */}
+              {hasMorePosts && (
+                <div className="text-center">
+                  <button
+                    onClick={loadMorePosts}
+                    className="bg-talentpool-dark text-white px-8 py-4 rounded-xl font-semibold hover:bg-talentpool-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    Load More Articles
+                  </button>
+                  <p className="text-gray-500 text-sm mt-4">
+                    {totalPosts - (currentPage * postsPerPage)} more articles available
+                  </p>
+                </div>
+              )}
+              
+              {/* End message when all posts are loaded */}
+              {!hasMorePosts && totalPosts > postsPerPage && (
+                <div className="text-center">
+                  <div className="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-600 rounded-xl">
+                    <span>You've reached the end of our articles</span>
+                  </div>
+                </div>
+              )}
+            </>
           )}
         </div>
       </section>
