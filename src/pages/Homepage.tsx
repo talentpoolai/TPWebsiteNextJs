@@ -736,7 +736,8 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {displayPosts.map((post, index) => (
-              <article key={index} className="bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+              <article key={post.slug || index} className="bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+                <Link to={`/blog/${post.slug}`} className="block">
                 <div className="aspect-w-16 aspect-h-9 bg-gray-200">
                   {post.featuredImage ? (
                     <img 
@@ -760,14 +761,24 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3 group-hover:text-talentpool-dark transition-colors line-clamp-2 h-12 sm:h-14 leading-6 sm:leading-7">
                     {post.title || 'Untitled Post'}
                   </h3>
-                  <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base line-clamp-3 h-16 leading-5">
-                    {post.excerpt || 'No description available.'}
+                  <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base leading-5" style={{
+                    display: '-webkit-box',
+                    WebkitLineClamp: 3,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden',
+                    height: '3.75rem', // 15 * 3 lines
+                    lineHeight: '1.25rem'
+                  }}>
+                    {(post.excerpt || 'No description available.').length > 120 
+                      ? `${(post.excerpt || 'No description available.').substring(0, 120)}...`
+                      : (post.excerpt || 'No description available.')
+                    }
                   </p>
                   <div className="flex items-center justify-between">
-                    <button className="text-talentpool-dark font-medium hover:text-talentpool-medium transition-colors flex items-center text-sm">
+                    <span className="text-talentpool-dark font-medium group-hover:text-talentpool-medium transition-colors flex items-center text-sm">
                     Read More
                     <ArrowRight className="w-4 h-4 ml-1" />
-                  </button>
+                    </span>
                     {post.category && (
                       <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
                         {post.category}
@@ -775,6 +786,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                     )}
                   </div>
                 </div>
+                </Link>
               </article>
             ))}
           </div>
