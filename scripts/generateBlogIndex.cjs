@@ -45,9 +45,9 @@ function getBlogPosts() {
         excerpt: data.excerpt || markdownContent.substring(0, 150).replace(/\n/g, ' ') + '...',
         content: htmlContent,
         author: data.author || {
-          name: 'Talentpool Team',
-          role: 'Content Writer',
-          avatar: 'https://www.thetalentpool.ai/wp-content/uploads/2024/10/default-avatar.webp'
+          name: 'Poushali Ganguly',
+          role: 'Business Head',
+          avatar: 'https://www.thetalentpool.ai/wp-content/uploads/2024/10/Poushali-Gangulyimage.webp'
         },
         publishedAt: data.publishedAt || data.date || new Date().toISOString(),
         readTime: data.readTime || calculateReadTime(markdownContent),
