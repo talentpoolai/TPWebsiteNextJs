@@ -3,16 +3,35 @@ import { Link } from 'react-router-dom';
 import { Calendar, Clock, Search } from 'lucide-react';
 import blogIndex from '../data/blogIndex.json';
 
+interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  author: {
+    name: string;
+    role: string;
+    avatar: string;
+  };
+  publishedAt: string;
+  readTime: string;
+  category: string;
+  tags: string[];
+  featuredImage: string;
+  featured: boolean;
+  seo: {
+    metaTitle: string;
+    metaDescription: string;
+    keywords: string[];
+  };
+}
+
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [posts, setPosts] = useState<BlogPost[]>([]);
 
-  useEffect(() => {
-    setPosts(blogIndex);
-  }, []);
-
-  const filteredPosts = blogIndex.filter((post) =>
+  const filteredPosts = (blogIndex as BlogPost[]).filter((post) =>
     (selectedCategory === "All" || post.category === selectedCategory) &&
     (
       post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -20,7 +39,7 @@ const Blog = () => {
     )
   );
 
-  const blogCategories = ["All", ...Array.from(new Set(blogIndex.map(p => p.category)))];
+  const blogCategories = ["All", ...Array.from(new Set((blogIndex as BlogPost[]).map(p => p.category)))];
 
   return (
     <div>
