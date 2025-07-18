@@ -114,6 +114,65 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Compliance Section */}
+        <div className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-2xl p-8 mb-12">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-3">
+              Enterprise-Grade Security & Compliance
+            </h3>
+            <p className="text-gray-300 text-lg">
+              Your data is protected by industry-leading security standards
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            {complianceBadges.map((badge, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 group">
+                <div className="flex items-center justify-center mb-4">
+                  <img 
+                    src={badge.image} 
+                    alt={badge.name}
+                    className="h-16 w-auto object-contain filter brightness-0 invert group-hover:scale-110 transition-transform"
+                  />
+                </div>
+                <div className="text-center">
+                  <div className="flex items-center justify-center mb-2">
+                    {badge.icon}
+                    <span className="ml-2 text-sm font-semibold text-green-400">Verified</span>
+                  </div>
+                  <h4 className="text-white font-bold text-lg mb-2">{badge.description}</h4>
+                  {badge.verified && (
+                    <div className="flex items-center justify-center">
+                      <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                      <span className="text-green-400 text-sm font-medium">Active Certification</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Security Metrics */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <div className="text-2xl font-bold text-white mb-1">256-bit</div>
+              <div className="text-gray-400 text-sm">SSL Encryption</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-white mb-1">99.9%</div>
+              <div className="text-gray-400 text-sm">Uptime SLA</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-white mb-1">24/7</div>
+              <div className="text-gray-400 text-sm">Security Monitoring</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-white mb-1">Annual</div>
+              <div className="text-gray-400 text-sm">Security Audits</div>
+            </div>
+          </div>
+        </div>
+
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
