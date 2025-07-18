@@ -342,14 +342,14 @@ const Pricing: React.FC = () => {
           enterprise: true
         },
         {
-          name: "Custom Report Designer",
-          lite: false,
+          name: "Custom Dashboards",
+          lite: true,
           pro: true,
           enterprise: true
         },
         {
-          name: "Custom Dashboards",
-          lite: true,
+          name: "Custom Report Designer",
+          lite: "Paid Upgrade",
           pro: true,
           enterprise: true
         }
