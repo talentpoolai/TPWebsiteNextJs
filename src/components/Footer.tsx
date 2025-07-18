@@ -117,6 +117,11 @@ const Footer: React.FC = () => {
               </Link>
               <Link to="/pricing" className="block text-gray-400 hover:text-white transition-colors">
                 Pricing
+              </Link>
+            </div>
+          </div>
+        </div>
+
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
