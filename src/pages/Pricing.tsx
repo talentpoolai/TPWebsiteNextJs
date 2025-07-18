@@ -186,14 +186,14 @@ const Pricing: React.FC = () => {
           enterprise: true
         },
         {
-          name: "Naukri Plugin",
-          lite: "Paid Upgrade",
+          name: "Duplicate Resume Detection",
+          lite: true,
           pro: true,
           enterprise: true
         },
         {
-          name: "Duplicate Resume Detection",
-          lite: true,
+          name: "Naukri Plugin",
+          lite: "Paid Upgrade",
           pro: true,
           enterprise: true
         },
