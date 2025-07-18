@@ -75,8 +75,8 @@ const Footer: React.FC = () => {
           </div>
           
           {/* Enhanced Security Information */}
-          {/* <div className="border-t border-gray-700 pt-6 mt-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-6">
+          <div className="border-t border-gray-700 pt-6 mt-8">
+            {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-6">
               <div className="flex flex-col items-center">
                 <Lock className="w-6 h-6 text-blue-400 mb-2" />
                 <div className="text-white font-bold text-lg">256-bit</div>
