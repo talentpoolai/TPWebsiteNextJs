@@ -114,10 +114,8 @@ const Blog = () => {
                             {new Date(post.publishedAt).toLocaleDateString()}
                           </div>
                         </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-talentpool-dark transition-colors">
-                          {post.title}
-                        </h3>
-                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-talentpool-dark transition-colors line-clamp-2 h-14 leading-7">
+                        
+                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-talentpool-dark transition-colors line-clamp-3 h-14 leading-6">
                           {post.title}
                         </h3>
                         <p className="text-gray-600 line-clamp-3 h-18 leading-6">{post.excerpt}</p>
