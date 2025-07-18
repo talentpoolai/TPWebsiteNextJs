@@ -812,7 +812,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
               
               
               
-              {/* Trust indicators */}
+              {/* Trust indicators 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm text-gray-500">
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
@@ -826,7 +826,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                   <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
                   <span>Setup in 5 minutes</span>
                 </div>
-              </div>
+              </div>*/}
             </div>
           </div>
         </div>
