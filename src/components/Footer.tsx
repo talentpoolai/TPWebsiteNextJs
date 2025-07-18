@@ -58,54 +58,68 @@ const Footer: React.FC = () => {
                 
                 <div className="flex flex-col items-center text-center">
                   {/* Badge Image */}
-                  <div className="w-16 h-16 mb-4 flex items-center justify-center bg-white rounded-xl shadow-sm group-hover:scale-105 transition-transform">
-                    <img 
-                      src={badge.image} 
-                      alt={badge.name}
-                      className="w-12 h-12 object-contain"
-                    />
-                  </div>
-                  
-                  {/* Badge Info */}
-                  <h4 className="text-white font-semibold text-sm mb-1">
+                  <img 
+                    src="/images/uploads/678a6d6fc5825e05c17510b8_678a6d497673e6547fd00d40_aicpa-soc-logo-PNG.png" 
+                    alt="SOC 2 Type II"
+                    className="w-24 h-24 object-contain group-hover:scale-105 transition-transform"
                     {badge.name}
                   </h4>
-                  <p className="text-gray-400 text-xs">
-                    {badge.description}
-                  </p>
-                  
-                  {/* Verification Status */}
-                  <div className="mt-3 flex items-center space-x-1">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-green-400 text-xs font-medium">Verified</span>
+                <div className="flex flex-wrap justify-center gap-6 text-xs text-gray-400">
+                  <div className="flex items-center space-x-2">
+                    <Shield className="w-4 h-4 text-blue-400" />
+                    <span>Bank-Grade Security</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Lock className="w-4 h-4 text-green-400" />
+                    <span>End-to-End Encryption</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Award className="w-4 h-4 text-purple-400" />
+                    <span>ISO 27001 Aligned</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Shield className="w-4 h-4 text-orange-400" />
+                    <span>Regular Penetration Testing</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Lock className="w-4 h-4 text-red-400" />
+                    <span>Zero Trust Architecture</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Award className="w-4 h-4 text-indigo-400" />
+                    <span>Multi-Factor Authentication</span>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-          
-          {/* Additional Security Info */}
-          <div className="mt-8 text-center">
-            <div className="inline-flex items-center space-x-6 text-xs text-gray-400">
-              <div className="flex items-center space-x-2">
-                <Lock className="w-4 h-4" />
-                <span>256-bit SSL Encryption</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Shield className="w-4 h-4" />
-                <span>Regular Security Audits</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Award className="w-4 h-4" />
-                <span>ISO 27001 Aligned</span>
-              </div>
             </div>
           </div>
-        </div>
-
+            {/* Enhanced Security Information */}
+            <div className="border-t border-gray-700 pt-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-6">
+                <div className="flex flex-col items-center">
+                  <Lock className="w-6 h-6 text-blue-400 mb-2" />
+                  <div className="text-white font-bold text-lg">256-bit</div>
+                  <div className="text-gray-400 text-xs">SSL Encryption</div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <Shield className="w-6 h-6 text-green-400 mb-2" />
+                  <div className="text-white font-bold text-lg">99.9%</div>
+                  <div className="text-gray-400 text-xs">Uptime SLA</div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <Award className="w-6 h-6 text-purple-400 mb-2" />
+                  <div className="text-white font-bold text-lg">24/7</div>
+                  <div className="text-gray-400 text-xs">Security Monitoring</div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <Lock className="w-6 h-6 text-orange-400 mb-2" />
+                  <div className="text-white font-bold text-lg">Annual</div>
+                  <div className="text-gray-400 text-xs">Security Audits</div>
+                </div>
+              </div>
+              
+              {/* Additional Security Features */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <div className="space-y-2">
               <Link to="/about" className="block text-gray-400 hover:text-white transition-colors">
