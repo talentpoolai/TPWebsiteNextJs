@@ -87,7 +87,7 @@ const Features: React.FC = () => {
     { name: "Indeed", logo: "/images/3.png" },
     { name: "Slack", logo: "/images/4.png" },
     { name: "Microsoft Teams", logo: "/images/5.png" },
-    { name: "Google Workspace", logo: "/images/6.png" },
+    { name: "Google Workspace", logo: "/images/gmeet.png" },
     { name: "Zoom", logo: "/images/7.png" },
     { name: "DocuSign", logo: "/images/9.png" },
     { name: "BambooHR", logo: "/images/10.png" },
