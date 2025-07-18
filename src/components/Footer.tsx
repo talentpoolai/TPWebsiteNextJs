@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
                     className="w-20 h-20 object-contain group-hover:scale-105 transition-transform mb-3"
                   />
                   <h4 className="text-lg font-semibold text-white mt-4 mb-2">
-                    
+                    {badge.name}
                   </h4>
                   <p className="text-gray-400 text-sm">
                     {badge.description}
