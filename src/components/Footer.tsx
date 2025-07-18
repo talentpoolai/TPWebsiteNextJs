@@ -116,15 +116,15 @@ const Footer: React.FC = () => {
 
         {/* Compliance Badges */}
         <div className="mt-8 pt-8 border-t border-gray-800">
-          <div className="text-center">
+          <div className="text-left">
             <p className="text-gray-400 text-sm mb-6">Enterprise-Grade Security & Compliance</p>
-            <div className="flex justify-center items-center space-x-12">
+            <div className="flex items-center space-x-8">
               {complianceBadges.map((badge, index) => (
                 <div key={index} className="flex flex-col items-center group">
                   <img 
                     src={badge.image} 
                     alt={badge.name}
-                    className="w-16 h-16 object-contain mb-3 opacity-80 group-hover:opacity-100 transition-opacity"
+                    className="w-20 h-20 object-contain mb-3 opacity-80 group-hover:opacity-100 transition-opacity"
                   />
                   <span className="text-sm text-gray-500 group-hover:text-gray-400 transition-colors">
                     {badge.name}
