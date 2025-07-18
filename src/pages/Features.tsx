@@ -183,7 +183,7 @@ const Features: React.FC = () => {
 
             {/* Floating logos in creative arrangement */}
             <div className="relative">
-              <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center">
+              <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center">
                 {integrations.map((integration, index) => (
                   <div key={index} className="group">
                     <div className="aspect-square bg-white rounded-2xl p-4 hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-talentpool-dark transform hover:-translate-y-2 hover:scale-105">
