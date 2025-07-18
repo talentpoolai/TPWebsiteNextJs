@@ -114,60 +114,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Compliance Badges */}
-        <div className="mt-8 pt-8 border-t border-gray-800">
-          <div className="text-center bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8">
-            <div className="mb-6">
-              <h3 className="text-white text-2xl font-bold mb-3">Enterprise-Grade Security & Compliance</h3>
-              <p className="text-gray-300 text-lg">Bank-level security with industry-leading compliance standards</p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
-              {complianceBadges.map((badge, index) => (
-                <div key={index} className="flex flex-col items-center group cursor-pointer bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                  <div className="mb-4">
-                    {badge.icon}
-                  </div>
-                  <img 
-                    src={`/images/${badge.image.split('/').pop()}`}
-                    alt={badge.name}
-                    className="w-20 h-20 object-contain mb-4 opacity-90 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"
-                  />
-                  <div className="text-center">
-                    <h4 className="text-white font-bold text-lg mb-1">{badge.name}</h4>
-                    <p className="text-gray-400 text-sm font-medium">{badge.description}</p>
-                    {badge.verified && (
-                      <div className="flex items-center justify-center mt-2">
-                        <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-                        <span className="text-green-400 text-xs font-semibold">Verified</span>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-            
-            {/* Additional Security Features */}
-            <div className="border-t border-gray-700 pt-6">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                <div>
-                  <div className="text-white font-bold text-lg">256-bit</div>
-                  <div className="text-gray-400 text-sm">SSL Encryption</div>
-                </div>
-                <div>
-                  <div className="text-white font-bold text-lg">99.9%</div>
-                  <div className="text-gray-400 text-sm">Uptime SLA</div>
-                </div>
-                <div>
-                  <div className="text-white font-bold text-lg">24/7</div>
-                  <div className="text-gray-400 text-sm">Security Monitoring</div>
-                </div>
-                <div>
-                  <div className="text-white font-bold text-lg">Annual</div>
-                  <div className="text-gray-400 text-sm">Security Audits</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
