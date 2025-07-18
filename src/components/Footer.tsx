@@ -5,21 +5,21 @@ import { Linkedin, Twitter, Mail, Shield, Award, Lock } from 'lucide-react';
 const Footer: React.FC = () => {
   const complianceBadges = [
     {
-      name: "SOC 2 Type II",
+      name: "",
       description: "Security & Availability",
       icon: <Shield className="w-6 h-6 text-blue-600" />,
       image: "/images/678a6d6fc5825e05c17510b8_678a6d497673e6547fd00d40_aicpa-soc-logo-PNG.png",
       verified: true
     },
     {
-      name: "GDPR Compliant",
+      name: "",
       description: "Data Protection",
       icon: <Lock className="w-6 h-6 text-green-600" />,
       image: "/images/logo-gdpr@2x.webp",
       verified: true
     },
     {
-      name: "PCI DSS",
+      name: "",
       description: "Payment Security",
       icon: <Award className="w-6 h-6 text-purple-600" />,
       image: "/images/pci-dss-1.png",
