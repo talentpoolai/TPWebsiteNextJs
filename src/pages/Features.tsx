@@ -82,18 +82,18 @@ const Features: React.FC = () => {
   ];
 
   const integrations = [
-    { name: "Naukri", logo: "/1.png" },
-    { name: "LinkedIn", logo: "/2.png" },
-    { name: "Indeed", logo: "/3.png" },
-    { name: "Slack", logo: "/4.png" },
-    { name: "Microsoft Teams", logo: "/5.png" },
-    { name: "Google Workspace", logo: "/6.png" },
-    { name: "Zoom", logo: "/7.png" },
-    { name: "Outlook", logo: "/8.png" },
-    { name: "DocuSign", logo: "/9.png" },
-    { name: "BambooHR", logo: "/10.png" },
-    { name: "Workday", logo: "/11.png" },
-    { name: "Greenhouse", logo: "/12.png" }
+    { name: "Naukri", logo: "/images/1.png" },
+    { name: "LinkedIn", logo: "/images/2.png" },
+    { name: "Indeed", logo: "/images/3.png" },
+    { name: "Slack", logo: "/images/4.png" },
+    { name: "Microsoft Teams", logo: "/images/5.png" },
+    { name: "Google Workspace", logo: "/images/6.png" },
+    { name: "Zoom", logo: "/images/7.png" },
+    { name: "Outlook", logo: "/images/8.png" },
+    { name: "DocuSign", logo: "/images/9.png" },
+    { name: "BambooHR", logo: "/images/10.png" },
+    { name: "Workday", logo: "/images/11.png" },
+    { name: "Greenhouse", logo: "/images/12.png" }
   ];
 
   return (
