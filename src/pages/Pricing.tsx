@@ -125,7 +125,7 @@ const Pricing: React.FC = () => {
           name: "Candidate database",
           lite: "5,000 resumes",
           pro: "25,000 resumes",
-          enterprise: "75,000"
+          enterprise: "75,000 resumes"
         }
       ]
     },
