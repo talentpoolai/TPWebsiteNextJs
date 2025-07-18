@@ -2,77 +2,105 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 const { marked } = require('marked');
+const fetch = global.fetch || ((...args) => import('node-fetch').then(({default: fetch}) => fetch(...args)));
 
-// Paths
-const blogDir = path.join(__dirname, '../src/content/blog');
-const outputFile = path.join(__dirname, '../src/data/blogIndex.json');
+// GitHub repo details
+const GITHUB_OWNER = "talentpoolai"; // e.g., "tejas-shimpi"
+const GITHUB_REPO = "TPblogs";    // e.g., "blog-content"
+const GITHUB_BRANCH = "main";                 // or "master"
+const GITHUB_API_URL = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/content?ref=${GITHUB_BRANCH}`;
+const RAW_BASE_URL = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}`;
 
-// Read time helper
-function calculateReadTime(markdown) {
+// Local paths in Bolt
+const localMarkdownDir = path.join(__dirname, '../content');
+const outputJsonFile = path.join(__dirname, '../src/data/blogIndex.json');
+
+// Utility: calculate reading time
+function calculateReadTime(text) {
   const wordsPerMinute = 200;
-  const text = markdown.replace(/[#_*>\-!\[\]\(\)`]/g, '');
   const wordCount = text.split(/\s+/).length;
-  return `${Math.max(1, Math.ceil(wordCount / wordsPerMinute))} min read`;
+  const minutes = Math.ceil(wordCount / wordsPerMinute);
+  return `${minutes} min read`;
 }
 
-function adjustImagePaths(markdown, slug) {
-  // Adjust relative paths so frontend can fetch images directly
-  return markdown.replace(/\!\[(.*?)\]\((images\/.*?)\)/g, (_, altText, imagePath) => {
-    return `![${altText}](src/content/blog/${imagePath})`;
-  });
+// Fetch all markdown file names from GitHub
+async function fetchMarkdownFileList() {
+  console.log("🌐 Fetching markdown file list from GitHub...");
+  const res = await fetch(GITHUB_API_URL);
+
+  if (!res.ok) {
+    throw new Error(`❌ Failed to fetch file list: ${res.statusText}`);
+  }
+
+  const files = await res.json();
+  return files
+    .filter(file => file.name.endsWith('.md'))
+    .map(file => file.name);
 }
 
-function getBlogPosts() {
-  const files = fs.readdirSync(blogDir);
+// Download markdown files
+async function downloadMarkdownFiles(fileList) {
+  if (!fs.existsSync(localMarkdownDir)) {
+    fs.mkdirSync(localMarkdownDir, { recursive: true });
+  }
+
+  for (const file of fileList) {
+    const rawUrl = `${RAW_BASE_URL}/content/${file}`;
+    const res = await fetch(rawUrl);
+    if (!res.ok) {
+      console.error(`❌ Failed to download ${file}`);
+      continue;
+    }
+    const content = await res.text();
+    fs.writeFileSync(path.join(localMarkdownDir, file), content, 'utf8');
+    console.log(`✅ Downloaded: ${file}`);
+  }
+}
+
+// Generate JSON from markdown files
+function generateBlogIndex() {
+  console.log("📖 Generating blogIndex.json...");
+  const files = fs.readdirSync(localMarkdownDir);
 
   const posts = files
     .filter(file => file.endsWith('.md'))
     .map(file => {
-      const filePath = path.join(blogDir, file);
+      const filePath = path.join(localMarkdownDir, file);
       const fileContents = fs.readFileSync(filePath, 'utf8');
-      const { data, content: markdownContent } = matter(fileContents);
-
-      // Adjust image paths to be frontend compatible
-      const cleanedMarkdown = adjustImagePaths(markdownContent, data.slug || file.replace(/\.md$/, ''));
-
-      // Convert markdown → HTML
-      const htmlContent = marked(cleanedMarkdown);
+      const { data, content } = matter(fileContents);
 
       return {
-        id: data.id || path.basename(file, '.md'),
-        title: data.title || 'Untitled Blog',
-        slug: data.slug || path.basename(file, '.md'),
-        excerpt: data.excerpt || markdownContent.substring(0, 150).replace(/\n/g, ' ') + '...',
-        content: htmlContent,
-        author: data.author || {
-          name: 'Poushali Ganguly',
-          role: 'Business Head',
-          avatar: 'https://www.thetalentpool.ai/wp-content/uploads/2024/10/Poushali-Gangulyimage.webp'
-        },
-        publishedAt: data.publishedAt || data.date || new Date().toISOString(),
-        readTime: data.readTime || calculateReadTime(markdownContent),
-        category: data.category || (data.categories?.[0] ?? 'General'),
+        id: data.id || file.replace('.md', ''),
+        title: data.title,
+        slug: data.slug || file.replace('.md', ''),
+        excerpt: data.excerpt || content.substring(0, 150) + "...",
+        content: marked(content),
+        author: data.author,
+        publishedAt: data.publishedAt,
+        readTime: calculateReadTime(content),
+        category: data.category,
         tags: data.tags || [],
-        featuredImage: data.featuredImage
-          ? `src/content/blog/images/${path.basename(data.featuredImage)}`
-          : '',
+        featuredImage: `${RAW_BASE_URL}/images/${data.featuredImage}`,
         featured: data.featured || false,
-        seo: {
-          metaTitle: data.seo?.metaTitle || data.title,
-          metaDescription: data.seo?.metaDescription || data.excerpt || '',
-          keywords: data.seo?.keywords || data.tags || []
-        }
+        seo: data.seo || {},
       };
     })
     .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
 
-  return posts;
+  fs.writeFileSync(outputJsonFile, JSON.stringify(posts, null, 2));
+  console.log(`✅ blogIndex.json generated with ${posts.length} posts.`);
 }
 
-function buildBlogIndex() {
-  const posts = getBlogPosts();
-  fs.writeFileSync(outputFile, JSON.stringify(posts, null, 2));
-  console.log(`✅ Blog index generated with ${posts.length} posts.`);
+// Main flow
+async function main() {
+  try {
+    const fileList = await fetchMarkdownFileList();
+    await downloadMarkdownFiles(fileList);
+    generateBlogIndex();
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
 }
 
-buildBlogIndex();
+main();
