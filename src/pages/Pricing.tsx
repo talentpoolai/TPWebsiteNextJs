@@ -180,12 +180,6 @@ const Pricing: React.FC = () => {
           enterprise: true
         },
         {
-          name: "No-code Career Website",
-          lite: "Paid upgrade",
-          pro: true,
-          enterprise: true
-        },
-        {
           name: "Employee Referral Portal",
           lite: true,
           pro: true,
@@ -193,7 +187,7 @@ const Pricing: React.FC = () => {
         },
         {
           name: "Naukri Plugin",
-          lite: false,
+          lite: "Paid Upgrade",
           pro: true,
           enterprise: true
         },
