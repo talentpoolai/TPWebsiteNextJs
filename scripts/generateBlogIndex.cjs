@@ -3,23 +3,23 @@ const path = require('path');
 const matter = require('gray-matter');
 const { marked } = require('marked');
 
-// Configure marked
-marked.setOptions({
-  breaks: true,          // Preserve line breaks
-  smartypants: true,     // Smart quotes/dashes
-  gfm: true              // GitHub flavored markdown
-});
-
 // Paths
 const blogDir = path.join(__dirname, '../src/content/blog');
 const outputFile = path.join(__dirname, '../src/data/blogIndex.json');
 
-// Read time function
+// Read time helper
 function calculateReadTime(markdown) {
   const wordsPerMinute = 200;
-  const text = markdown.replace(/[#_*>\-!\[\]\(\)`]/g, ''); // Strip markdown symbols
+  const text = markdown.replace(/[#_*>\-!\[\]\(\)`]/g, '');
   const wordCount = text.split(/\s+/).length;
-  return `${Math.ceil(wordCount / wordsPerMinute)} min read`;
+  return `${Math.max(1, Math.ceil(wordCount / wordsPerMinute))} min read`;
+}
+
+function adjustImagePaths(markdown, slug) {
+  // Adjust relative paths so frontend can fetch images directly
+  return markdown.replace(/\!\[(.*?)\]\((images\/.*?)\)/g, (_, altText, imagePath) => {
+    return `![${altText}](src/content/blog/${imagePath})`;
+  });
 }
 
 function getBlogPosts() {
@@ -32,28 +32,30 @@ function getBlogPosts() {
       const fileContents = fs.readFileSync(filePath, 'utf8');
       const { data, content: markdownContent } = matter(fileContents);
 
-      // Clean up markdown: ensure double line breaks for paragraphs
-      const cleanedMarkdown = markdownContent.replace(/\r?\n(?=\S)/g, '\n\n');
+      // Adjust image paths to be frontend compatible
+      const cleanedMarkdown = adjustImagePaths(markdownContent, data.slug || file.replace(/\.md$/, ''));
 
-      // Convert markdown to HTML
+      // Convert markdown → HTML
       const htmlContent = marked(cleanedMarkdown);
 
       return {
         id: data.id || path.basename(file, '.md'),
         title: data.title || 'Untitled Blog',
         slug: data.slug || path.basename(file, '.md'),
-        excerpt: data.excerpt || markdownContent.substring(0, 150) + '...',
-        content: htmlContent, // ✅ Now clean HTML
+        excerpt: data.excerpt || markdownContent.substring(0, 150).replace(/\n/g, ' ') + '...',
+        content: htmlContent,
         author: data.author || {
-          name: 'Poushali Ganguly',
-          role: 'Business Head',
-          avatar: 'https://www.thetalentpool.ai/wp-content/uploads/2024/10/Poushali-Gangulyimage.webp'
+          name: 'Talentpool Team',
+          role: 'Content Writer',
+          avatar: 'https://www.thetalentpool.ai/wp-content/uploads/2024/10/default-avatar.webp'
         },
         publishedAt: data.publishedAt || data.date || new Date().toISOString(),
         readTime: data.readTime || calculateReadTime(markdownContent),
         category: data.category || (data.categories?.[0] ?? 'General'),
         tags: data.tags || [],
-        featuredImage: data.featuredImage || data.coverImage || '',
+        featuredImage: data.featuredImage
+          ? `src/content/blog/images/${path.basename(data.featuredImage)}`
+          : '',
         featured: data.featured || false,
         seo: {
           metaTitle: data.seo?.metaTitle || data.title,
