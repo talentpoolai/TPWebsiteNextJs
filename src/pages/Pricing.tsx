@@ -388,14 +388,14 @@ const Pricing: React.FC = () => {
           enterprise: true
         },
         {
-          name: "Regular Backups",
-          lite: false,
+          name: "Software Upgrades",
+          lite: true,
           pro: true,
           enterprise: true
         },
         {
-          name: "Software Upgrades",
-          lite: true,
+          name: "Regular Backups",
+          lite: false,
           pro: true,
           enterprise: true
         },
