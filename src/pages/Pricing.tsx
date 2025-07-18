@@ -388,12 +388,6 @@ const Pricing: React.FC = () => {
           enterprise: true
         },
         {
-          name: "Dedicated Account Manager",
-          lite: false,
-          pro: false,
-          enterprise: true
-        },
-        {
           name: "Regular Backups",
           lite: false,
           pro: true,
@@ -406,7 +400,7 @@ const Pricing: React.FC = () => {
           enterprise: true
         },
         {
-          name: "Priority Support",
+          name: "Dedicated Account Manager",
           lite: false,
           pro: false,
           enterprise: true
