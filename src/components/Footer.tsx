@@ -8,21 +8,21 @@ const Footer: React.FC = () => {
       name: "SOC 2 Type II",
       description: "Security & Availability",
       icon: <Shield className="w-6 h-6 text-blue-600" />,
-      image: "/images/uploads/678a6d6fc5825e05c17510b8_678a6d497673e6547fd00d40_aicpa-soc-logo-PNG.png",
+      image: "/images/678a6d6fc5825e05c17510b8_678a6d497673e6547fd00d40_aicpa-soc-logo-PNG.png",
       verified: true
     },
     {
       name: "GDPR Compliant",
       description: "Data Protection",
       icon: <Lock className="w-6 h-6 text-green-600" />,
-      image: "/images/uploads/logo-gdpr@2x.webp",
+      image: "/images/logo-gdpr@2x.webp",
       verified: true
     },
     {
       name: "PCI DSS",
       description: "Payment Security",
       icon: <Award className="w-6 h-6 text-purple-600" />,
-      image: "/images/uploads/pci-dss-1.png",
+      image: "/images/pci-dss-1.png",
       verified: true
     }
   ];
@@ -122,7 +122,7 @@ const Footer: React.FC = () => {
               {complianceBadges.map((badge, index) => (
                 <div key={index} className="flex flex-col items-center group cursor-pointer">
                   <img 
-                    src={badge.image} 
+                    src={badge.image.startsWith('/images/') ? badge.image : `/images/${badge.image}`}
                     alt={badge.name}
                     className="w-24 h-24 object-contain mb-4 opacity-90 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
                   />
