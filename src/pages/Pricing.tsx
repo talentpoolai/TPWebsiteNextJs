@@ -222,8 +222,8 @@ const Pricing: React.FC = () => {
         },
         {
           name: "Requisition Approval Workflows",
-          lite: false,
-          pro: false,
+          lite: "Paid Upgrade",
+          pro: "Paid Upgrade",
           enterprise: true
         }
       ]
