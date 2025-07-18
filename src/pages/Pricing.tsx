@@ -209,6 +209,12 @@ const Pricing: React.FC = () => {
       name: "Organization & Workflows",
       features: [
         {
+          name: "Position Templates",
+          lite: true,
+          pro: true,
+          enterprise: true
+        },
+        {
           name: "Department Hierarchy Management",
           lite: false,
           pro: false,
@@ -218,12 +224,6 @@ const Pricing: React.FC = () => {
           name: "Requisition Approval Workflows",
           lite: false,
           pro: false,
-          enterprise: true
-        },
-        {
-          name: "Position Templates",
-          lite: true,
-          pro: true,
           enterprise: true
         }
       ]
