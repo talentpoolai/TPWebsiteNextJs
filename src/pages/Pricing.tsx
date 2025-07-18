@@ -110,6 +110,12 @@ const Pricing: React.FC = () => {
           enterprise: true
         },
         {
+          name: "Unlimited AI Tokens",
+          lite: true,
+          pro: true,
+          enterprise: true
+        },
+        {
           name: "Joiners",
           lite: "100",
           pro: "200",
@@ -117,15 +123,9 @@ const Pricing: React.FC = () => {
         },
         {
           name: "Candidate database",
-          lite: "5,000 resumes/year",
-          pro: "25,000 resumes/year",
-          enterprise: "75,000/year"
-        },
-        {
-          name: "Unlimited AI Tokens",
-          lite: true,
-          pro: true,
-          enterprise: true
+          lite: "5,000 resumes",
+          pro: "25,000 resumes",
+          enterprise: "75,000"
         }
       ]
     },
