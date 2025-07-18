@@ -59,9 +59,9 @@ const Footer: React.FC = () => {
                 <div className="flex flex-col items-center text-center">
                   {/* Badge Image */}
                   <img 
-                    src={badge.img}
-                    alt="SOC 2 Type II"
-                    className="w-24 h-24 object-contain group-hover:scale-105 transition-transform"
+                    src={badge.image}
+                    alt={badge.name}
+                    className="w-20 h-20 object-contain group-hover:scale-105 transition-transform mb-3"
                   />
                   <h4 className="text-lg font-semibold text-white mt-4 mb-2">
                     {badge.name}
