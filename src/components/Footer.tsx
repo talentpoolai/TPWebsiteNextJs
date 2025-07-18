@@ -8,21 +8,21 @@ const Footer: React.FC = () => {
       name: "SOC 2 Type II",
       description: "Security & Availability",
       icon: <Shield className="w-6 h-6 text-blue-600" />,
-      image: "/images/Symbl.ai-Achieves-SOC-2-Type-2-Certification-removebg-preview.png",
+      image: "/images/uploads/Symbl.ai-Achieves-SOC-2-Type-2-Certification-removebg-preview.png",
       verified: true
     },
     {
       name: "GDPR Compliant",
       description: "Data Protection",
       icon: <Lock className="w-6 h-6 text-green-600" />,
-      image: "/images/Filecamp-gdpr.png",
+      image: "/images/uploads/Filecamp-gdpr.png",
       verified: true
     },
     {
       name: "PCI DSS",
       description: "Payment Security",
       icon: <Award className="w-6 h-6 text-purple-600" />,
-      image: "/images/pci-dss-1.png",
+      image: "/images/uploads/pci-dss-1.png",
       verified: true
     }
   ];
