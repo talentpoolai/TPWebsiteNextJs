@@ -232,12 +232,6 @@ const Pricing: React.FC = () => {
       name: "Candidate Experience",
       features: [
         {
-          name: "Candidate Portal",
-          lite: false,
-          pro: false,
-          enterprise: true
-        },
-        {
           name: "Engagement Worklows",
           lite: true,
           pro: true,
@@ -250,9 +244,15 @@ const Pricing: React.FC = () => {
           enterprise: true
         },
         {
+          name: "Candidate Portal",
+          lite: "Paid Upgrade",
+          pro: "Paid Upgrade",
+          enterprise: true
+        },
+        {
           name: "Offer Management",
-          lite: false,
-          pro: false,
+          lite: "Paid Upgrade",
+          pro: "Paid Upgrade",
           enterprise: true
         }
       ]
