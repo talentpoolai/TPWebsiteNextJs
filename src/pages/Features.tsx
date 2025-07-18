@@ -211,7 +211,7 @@ const Features: React.FC = () => {
                       <span className="text-xs font-bold text-white">+</span>
                     </div>
                   </div>
-                  <span className="text-xl font-bold text-gray-800">and 50+ more integrations</span>
+                  <span className="text-xl font-bold text-gray-800">and more integrations</span>
                 </div>
               </div>
             </div>
