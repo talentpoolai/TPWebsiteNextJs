@@ -451,7 +451,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                   ))}
                 </div>
                 <img 
-                  src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/category-leader-winter-2024-300x300-1.png"
+                  src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.stickpng.com%2Fimg%2Ficons-logos-emojis%2Freview-platforms-logos%2Fcapterra-thumbnail&psig=AOvVaw0j6qR_OZrWRroLCDJV7U7-&ust=1753035673221000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJjd0_bEyY4DFQAAAAAdAAAAABAE"
                   alt="G2 Badge"
                   className="h-6 w-6 object-contain ml-2"
                 />
