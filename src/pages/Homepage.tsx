@@ -462,13 +462,13 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
               {/* Right side - Award badges */}
               <div className="grid grid-cols-1 sm:grid-cols-7 gap-1 justify-items-center">
                 {/* Capterra Best Value */}
-                <div className="group hover:scale-105 transition-transform duration-300">
+                {/* <div className="group hover:scale-105 transition-transform duration-300">
                   <img 
                     src="https://www.softwaresuggest.com/award_logo/trustworthy-tech-2025.png"
                     alt="Category Leader Winter 2024"
                     className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
                   />
-                </div>
+                </div> */}
 
                 {/* Capterra Best Value */}
                 <div className="group hover:scale-105 transition-transform duration-300">
