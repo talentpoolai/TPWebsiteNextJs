@@ -17,7 +17,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
     {
       url: "https://drive.google.com/file/d/1yY43xyZIw8QDaIo_vySrNZ7OB_T2IsHD/preview",
       quote: "Talentica has been part of the family at Mist, and they have been a key part of our engineering team. They bring us startup spirit and a wide range of required skills.",
-      customerName: "Bob Friday",
+      customerName: "",
       company: "",
       logo: "/images/rexel1.png",
       thumbnail: "/rexelthumbnail"
