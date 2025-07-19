@@ -461,7 +461,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
               </div>
 
               {/* Right side - Award badges */}
-              <div className="grid grid-cols-1 sm:grid-cols-7 gap-1 justify-items-center">
+              <div className="grid grid-cols-3 sm:grid-cols-7 gap-1 justify-items-center">
                 {/* Capterra Best Value */}
                 <div className="group hover:scale-105 transition-transform duration-300">
                   <img 
