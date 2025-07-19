@@ -255,17 +255,6 @@ const Benefits: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 border border-yellow-200">
-                  <div className="flex items-center mb-6">
-                    <div className="p-3 bg-yellow-100 rounded-xl mr-4">
-                      <BarChart3 className="w-8 h-8 text-yellow-600" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Get Real time Visibility and Analytics</h3>
-                  </div>
-                  <p className="text-gray-700 leading-relaxed">
-                    View a snapshot of the recruitment progress as per each position as soon as you log in. Talentpool provides you insightful analytics that help you make strategic decisions.
-                  </p>
-                </div>
               </div>
 
               <div className="relative">
@@ -275,6 +264,116 @@ const Benefits: React.FC = () => {
                   className="w-full h-96 object-cover rounded-2xl shadow-lg"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Real-time Visibility and Analytics Section */}
+        <section className="py-20 bg-gradient-to-br from-yellow-50 to-orange-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center justify-center p-2 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-full mb-6">
+                <span className="bg-white px-6 py-2 rounded-full text-gray-800 font-semibold text-sm">
+                  📊 Real-time Analytics
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Get Real-time Visibility and Analytics
+              </h2>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                View a snapshot of the recruitment progress as per each position as soon as you log in. Talentpool provides you insightful analytics that help you make strategic decisions.
+              </p>
+            </div>
+
+            {/* Analytics Features Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-orange-200 hover:shadow-xl transition-all duration-300 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <BarChart3 className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Pipeline Overview</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Get instant visibility into your entire recruitment pipeline with real-time position tracking
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-orange-200 hover:shadow-xl transition-all duration-300 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Performance Metrics</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Track key performance indicators and identify bottlenecks in your hiring process
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-orange-200 hover:shadow-xl transition-all duration-300 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Strategic Insights</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Make data-driven decisions with comprehensive analytics and actionable insights
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-orange-200 hover:shadow-xl transition-all duration-300 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Eye className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Instant Dashboard</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Access all critical recruitment data the moment you log in with customizable dashboards
+                </p>
+              </div>
+            </div>
+
+            {/* Key Benefits */}
+            <div className="mt-16 bg-white rounded-3xl p-12 shadow-xl border border-orange-200">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                    Transform Data into Actionable Insights
+                  </h3>
+                  <div className="space-y-6">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                        <CheckCircle className="w-5 h-5 text-orange-600" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Real-time Position Tracking</h4>
+                        <p className="text-gray-600">Monitor the progress of every open position with live updates and status changes</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                        <CheckCircle className="w-5 h-5 text-orange-600" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Comprehensive Reporting</h4>
+                        <p className="text-gray-600">Generate detailed reports on hiring metrics, team performance, and process efficiency</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                        <CheckCircle className="w-5 h-5 text-orange-600" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Predictive Analytics</h4>
+                        <p className="text-gray-600">Forecast hiring trends and identify potential challenges before they impact your goals</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gradient-to-br from-orange-100 to-yellow-100 rounded-2xl p-8 text-center">
+                  <div className="text-6xl font-bold text-orange-600 mb-4">360°</div>
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">Complete Visibility</h4>
+                  <p className="text-gray-600 leading-relaxed">
+                    Get a comprehensive view of your entire recruitment operation with real-time data, 
+                    performance metrics, and strategic insights all in one place.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
