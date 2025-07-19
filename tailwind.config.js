@@ -31,8 +31,10 @@ export default {
         }
       },
       fontFamily: {
-        'sans': ['Arial', 'system-ui', 'sans-serif'],
-      },
+  sans: ['Montserrat', 'sans-serif'],
+  heading: ['Oswald', 'sans-serif'],
+  serif: ['Playfair Display', 'serif'],
+},
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',
         'slide-up': 'slideUp 0.8s ease-out',
