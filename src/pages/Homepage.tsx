@@ -525,7 +525,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
               </div>
             </div>
             
-            {/* Centered Dots Navigation */}
+            {/* Centered Dots Navigation 
             <div className="flex justify-center mt-8 relative z-10">
               <div className="flex space-x-2 sm:space-x-3">
                 {videos.map((_, index) => (
@@ -541,7 +541,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                   />
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
           
           {/* Enhanced Grid of customer stories */}
