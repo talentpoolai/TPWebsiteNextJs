@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BlogPost } from '../../lib/blog';
-import { ArrowRight, CheckCircle, Star, Users, TrendingUp, Target, Zap, ChevronLeft, ChevronRight, Award, Check, CheckCheck, CheckCircle as CircleCheck } from 'lucide-react'components/PipeDriveForm';
+import { ArrowRight, CheckCircle, Star, Users, TrendingUp, Target, Zap, ChevronLeft, ChevronRight, Award, Check, CheckCheck, CheckCircle as CircleCheck } from 'lucide-react';
+import PipeDriveForm from '../components/PipeDriveForm';
 import blogIndex from '../data/blogIndex.json';
 
 interface HomepageProps {
