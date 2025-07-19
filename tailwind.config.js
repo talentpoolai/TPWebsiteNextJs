@@ -31,7 +31,7 @@ export default {
         }
       },
       fontFamily: {
-        'sans': ['Poppins', 'system-ui', 'sans-serif'],
+        'sans': ['Arial', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',
