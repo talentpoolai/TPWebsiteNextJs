@@ -357,9 +357,9 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                       
                       {/* Glow effect */}
                       <div className={`absolute inset-0 rounded-2xl sm:rounded-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 -z-10 blur-2xl ${
-                        card.accentColor === 'blue' ? 'bg-gradient-to-r from-blue-400 to-indigo-400' :
+                        card.accentColor === 'green' ? 'bg-gradient-to-r from-blue-400 to-indigo-400' :
                         card.accentColor === 'green' ? 'bg-gradient-to-r from-green-400 to-emerald-400' :
-                        card.accentColor === 'purple' ? 'bg-gradient-to-r from-purple-400 to-pink-400' :
+                        card.accentColor === 'green' ? 'bg-gradient-to-r from-purple-400 to-pink-400' :
                         'bg-gradient-to-r from-orange-400 to-red-400'
                       }`}></div>
                     </div>
