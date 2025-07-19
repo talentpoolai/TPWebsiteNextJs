@@ -466,10 +466,10 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                     <p className="text-gray-600 text-lg">{videos[currentVideoIndex].company}</p>
                   )}
                 </div>
-                <button className="bg-gradient-to-r from-talentpool-dark to-green-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-green-600 hover:to-talentpool-dark transition-all duration-300 flex items-center shadow-lg hover:shadow-xl transform hover:scale-105">
+                {/* <button className="bg-gradient-to-r from-talentpool-dark to-green-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-green-600 hover:to-talentpool-dark transition-all duration-300 flex items-center shadow-lg hover:shadow-xl transform hover:scale-105">
                   Read the full story
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
+                </button> */}
               </div>
               
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
