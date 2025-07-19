@@ -309,12 +309,17 @@ const Header: React.FC = () => {
               >
                 Talk to Us
               </button>
-              <Link 
-                to="/start-free"
+              <button
+                onClick={() => {
+                  const formSection = document.querySelector('.pipedrive-form-section');
+                  if (formSection) {
+                    formSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
                 className="bg-talentpool-dark text-white px-4 lg:px-6 py-2 rounded-lg font-medium hover:bg-talentpool-medium transition-colors text-sm whitespace-nowrap"
               >
                 Start Free
-              </Link>
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -359,13 +364,18 @@ const Header: React.FC = () => {
                   <button className="block w-full text-left text-sm font-medium text-gray-700 px-2 py-1">
                     Talk to Us
                   </button>
-                  <Link 
-                    to="/start-free"
+                  <button
+                    onClick={() => {
+                      const formSection = document.querySelector('.pipedrive-form-section');
+                      if (formSection) {
+                        formSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                      setIsMenuOpen(false);
+                    }}
                     className="block w-full bg-talentpool-dark text-white px-6 py-3 rounded-lg font-medium text-center"
-                    onClick={() => setIsMenuOpen(false)}
                   >
                     Start Free
-                  </Link>
+                  </button>
                 </div>
               </nav>
             </div>
