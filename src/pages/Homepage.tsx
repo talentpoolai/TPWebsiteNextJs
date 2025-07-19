@@ -444,7 +444,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                 </h1>
                 <div className="flex justify-center items-center mb-8">
               <div className="bg-white rounded-full px-6 py-3 shadow-lg border border-gray-200 flex items-center space-x-2">
-                <span className="text-2xl font-bold text-gray-900">4.8/5.0</span>
+                <span className="text-1xl font-bold text-gray-900">4.8/5.0</span>
                 <div className="flex items-center space-x-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
