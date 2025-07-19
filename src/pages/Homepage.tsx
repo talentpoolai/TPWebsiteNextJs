@@ -19,7 +19,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
       quote: "Talentica has been part of the family at Mist, and they have been a key part of our engineering team. They bring us startup spirit and a wide range of required skills.",
       customerName: "Bob Friday",
       company: "",
-      logo: "/rexel.png",
+      logo: "/images/rexel1.png",
       thumbnail: "https://www.talentica.com/wp-content/uploads/2019/02/Bob-1.webp"
     }
     // {
