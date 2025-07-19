@@ -429,24 +429,101 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
         </div>
       </section>
 
-      {/* Testimonials & Awards */}
+      {/* Awards & Recognition Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
-            <div className="inline-flex items-center justify-center p-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full mb-6">
-              <span className="bg-white px-6 py-2 rounded-full text-gray-800 font-semibold text-sm">
-                💬 Customer Success Stories
-              </span>
+          <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-lg border border-gray-100">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+              {/* Left side - Rating */}
+              <div className="text-center lg:text-left">
+                <div className="flex justify-center lg:justify-start items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <div className="text-4xl sm:text-5xl font-bold text-gray-900 mb-2">
+                  4.8 out of 5
+                </div>
+                <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 shadow-lg">
+                  Read G2 reviews
+                </button>
+              </div>
+
+              {/* Right side - Award badges */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center">
+                {/* Capterra Best Value */}
+                <div className="group hover:scale-105 transition-transform duration-300">
+                  <img 
+                    src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/category-leader-winter-2024-300x300-1.png"
+                    alt="Category Leader Winter 2024"
+                    className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
+                  />
+                </div>
+
+                {/* Software Suggest Top 50 */}
+                <div className="group hover:scale-105 transition-transform duration-300">
+                  <img 
+                    src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/high-performer-winter-2024-300x300-1.png"
+                    alt="High Performer Winter 2024"
+                    className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
+                  />
+                </div>
+
+                {/* G2 High Performer */}
+                <div className="group hover:scale-105 transition-transform duration-300">
+                  <img 
+                    src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/tracking-software.png"
+                    alt="Tracking Software"
+                    className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
+                  />
+                </div>
+
+                {/* G2 Best Support */}
+                <div className="group hover:scale-105 transition-transform duration-300">
+                  <img 
+                    src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/consumer-support-300x300-1.png"
+                    alt="Consumer Support"
+                    className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
+                  />
+                </div>
+
+                {/* G2 Best Relationship */}
+                <div className="group hover:scale-105 transition-transform duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-2 flex justify-center">
+                  <div className="text-center bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 border border-blue-200">
+                    <div className="text-2xl font-bold text-blue-600 mb-1">500+</div>
+                    <div className="text-sm text-gray-600 font-medium">Companies Trust Us</div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials & Awards */}
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Trusted by Industry Leaders
-              <br />
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Worldwide
-              </span>
+              Don't Just Take Our Word For It
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              See how leading companies are transforming their hiring processes and achieving remarkable results
+            <div className="flex justify-center items-center mb-8">
+              <div className="bg-white rounded-full px-6 py-3 shadow-lg border border-gray-200 flex items-center space-x-2">
+                <span className="text-2xl font-bold text-gray-900">4.8/5.0</span>
+                <div className="flex items-center space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <img 
+                  src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/category-leader-winter-2024-300x300-1.png"
+                  alt="G2 Badge"
+                  className="h-6 w-6 object-contain ml-2"
+                />
+              </div>
+            </div>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+              See what our customers are saying about their experience with Talentpool
             </p>
           </div>
 
