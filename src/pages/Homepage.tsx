@@ -181,7 +181,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                 </div> */}
                 <span className="text-white text-sm font-medium">🏆 Best Design Project 2025 </span>
                 <button className="text-white/80 hover:text-white transition-colors text-xs font-medium flex items-center group-hover:translate-x-0.5 transition-transform">
-                  
+                  Read more
                   <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-0.5 transition-transform" />
                 </button>
               </div>
