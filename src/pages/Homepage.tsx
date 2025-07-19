@@ -183,6 +183,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 font-sans leading-tight">
               The Only Recruitment Software
+            </h1>
             
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 px-4">
               <button 
