@@ -82,7 +82,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
       icon: <Target className="w-6 h-6 md:w-8 md:h-8 text-talentpool-dark" />,
       image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
       gradient: "from-blue-50 to-indigo-50",
-      accentColor: "blue"
+      accentColor: "green"
     },
     {
       title: "Handle unforeseen demand spikes",
@@ -100,7 +100,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
       icon: <Users className="w-6 h-6 md:w-8 md:h-8 text-talentpool-dark" />,
       image: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
       gradient: "from-purple-50 to-pink-50",
-      accentColor: "purple"
+      accentColor: "green"
     },
     {
       title: "Adapt to shifting priorities",
@@ -109,7 +109,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
       icon: <Zap className="w-6 h-6 md:w-8 md:h-8 text-talentpool-dark" />,
       image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
       gradient: "from-orange-50 to-red-50",
-      accentColor: "orange"
+      accentColor: "green"
     },
   ];
 
