@@ -390,6 +390,12 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                     {/* CTA Button */}
                     <div className="pt-4">
                       <button className={`group/btn inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 text-white font-semibold rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base ${
+                        onClick={() => {
+                          const formSection = document.querySelector('.pipedrive-form-section');
+                          if (formSection) {
+                            formSection.scrollIntoView({ behavior: 'smooth' });
+                          }
+                        }}
                         card.accentColor === 'blue' ? 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700' :
                         card.accentColor === 'green' ? 'bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700' :
                         card.accentColor === 'purple' ? 'bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700' :
