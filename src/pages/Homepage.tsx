@@ -516,22 +516,6 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                     className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
                   />
                 </div>
-                {/* G2 Best Support */}
-                <div className="group hover:scale-105 transition-transform duration-300">
-                  <img 
-                    src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/consumer-support-300x300-1.png"
-                    alt="Consumer Support"
-                    className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
-                  />
-                </div>
-                {/* G2 Best Support */}
-                <div className="group hover:scale-105 transition-transform duration-300">
-                  <img 
-                    src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/consumer-support-300x300-1.png"
-                    alt="Consumer Support"
-                    className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
-                  />
-                </div>
               </div>
             </div>
           </div>
