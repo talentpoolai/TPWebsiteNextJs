@@ -436,21 +436,19 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
               {/* Left side - Rating */}
               <div className="text-center lg:text-left">
-                <div className="flex justify-center lg:justify-start items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                  ))}
+                <div className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+                  Industry Recognition
                 </div>
-                <div className="text-4xl sm:text-5xl font-bold text-gray-900 mb-2">
-                  4.8 out of 5
-                </div>
-                <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 shadow-lg">
+                <p className="text-lg text-gray-600 mb-6">
+                  Recognized by leading industry platforms for excellence in recruitment technology
+                </p>
+                <button className="bg-gradient-to-r from-talentpool-dark to-green-600 text-white px-6 py-3 rounded-full font-semibold hover:from-talentpool-medium hover:to-green-700 transition-all duration-300 shadow-lg">
                   Read G2 reviews
                 </button>
               </div>
 
               {/* Right side - Award badges */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center">
                 {/* Capterra Best Value */}
                 <div className="group hover:scale-105 transition-transform duration-300">
                   <img 
@@ -485,14 +483,6 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                     alt="Consumer Support"
                     className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
                   />
-                </div>
-
-                {/* G2 Best Relationship */}
-                <div className="group hover:scale-105 transition-transform duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-2 flex justify-center">
-                  <div className="text-center bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 border border-blue-200">
-                    <div className="text-2xl font-bold text-blue-600 mb-1">500+</div>
-                    <div className="text-sm text-gray-600 font-medium">Companies Trust Us</div>
-                  </div>
                 </div>
               </div>
             </div>
