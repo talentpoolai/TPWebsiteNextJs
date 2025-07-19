@@ -443,7 +443,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                   <b>Industry Recognitions</b>
                 </h1>
                 <div className="flex justify-center items-center mb-8">
-              <div className="bg-white rounded-full px-3 py-1.5 shadow-lg border border-gray-200 flex items-center space-x-2">
+              <div className="bg-white rounded-full px-6 py-3 shadow-lg border border-gray-200 flex items-center space-x-2">
                 <span className="text-2xl font-bold text-gray-900">4.8/5.0</span>
                 <div className="flex items-center space-x-1">
                   {[...Array(5)].map((_, i) => (
