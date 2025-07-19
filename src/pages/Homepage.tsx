@@ -451,7 +451,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                   ))}
                 </div>
                 <img 
-                  src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/category-leader-winter-2024-300x300-1.png"
+                  src="/images.png"
                   alt="G2 Badge"
                   className="h-6 w-6 object-contain ml-2"
                 />
