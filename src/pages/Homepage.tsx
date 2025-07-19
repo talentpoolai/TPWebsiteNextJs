@@ -15,7 +15,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
 
   const videos = [
     {
-      url: "https://drive.google.com/file/d/1yY43xyZIw8QDaIo_vySrNZ7OB_T2IsHD/view?pli=1",
+      url: "https://drive.google.com/file/d/1yY43xyZIw8QDaIo_vySrNZ7OB_T2IsHD/preview",
       quote: "Talentica has been part of the family at Mist, and they have been a key part of our engineering team. They bring us startup spirit and a wide range of required skills.",
       customerName: "Bob Friday",
       company: "",
@@ -490,18 +490,18 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                               <button 
                                   className="w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 group"
                                 onClick={() => {
-                                  // Create and play video element
-                                  const videoElement = document.createElement('video');
-                                  videoElement.src = video.url;
-                                  videoElement.controls = true;
-                                  videoElement.className = "w-full h-full object-cover";
-                                  videoElement.play();
+                                  // Create and embed iframe for Google Drive video
+                                  const iframe = document.createElement('iframe');
+                                  iframe.src = video.url;
+                                  iframe.className = "w-full h-full rounded-xl";
+                                  iframe.setAttribute('allowfullscreen', 'true');
+                                  iframe.setAttribute('allow', 'autoplay');
                                   
-                                  // Replace thumbnail with video
-                                  const container = document.querySelector(`[data-video-index="${index}"]`);
+                                  // Replace thumbnail with iframe
+                                  const container = document.querySelector(`[data-video-index="${index}"] .aspect-video`);
                                   if (container) {
                                     container.innerHTML = '';
-                                    container.appendChild(videoElement);
+                                    container.appendChild(iframe);
                                   }
                                 }}
                               >
@@ -510,11 +510,11 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                             </div>
                           </div>
                         ) : (
-                          <video
+                          <iframe
                             src={video.url}
                               className="w-full h-full object-cover rounded-xl"
-                            controls
-                            preload="metadata"
+                            allowFullScreen
+                            allow="autoplay"
                           />
                         )}
                       </div>
