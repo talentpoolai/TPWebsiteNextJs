@@ -159,8 +159,33 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
 
   return (
     <div className="min-h-screen">
+      {/* Award Announcement Banner */}
+      <section className="bg-gradient-to-r from-amber-50 via-yellow-50 to-amber-50 border-b border-amber-200/50 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center justify-center text-center">
+            <div className="flex items-center space-x-3 bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 shadow-sm border border-amber-200/50">
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center">
+                  <Award className="w-4 h-4 text-white" />
+                </div>
+                <span className="text-sm font-semibold text-gray-900">🏆 Award Winner</span>
+              </div>
+              <div className="hidden sm:block w-px h-4 bg-gray-300"></div>
+              <p className="text-sm text-gray-700">
+                <span className="font-medium">We just won the Design Excellence Award!</span>
+                <span className="hidden md:inline ml-1">Recognized for outstanding user experience and innovation.</span>
+              </p>
+              <button className="text-amber-600 hover:text-amber-700 transition-colors text-sm font-medium flex items-center">
+                Learn more
+                <ArrowRight className="w-3 h-3 ml-1" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section */}
-      <section className="pt-24 sm:pt-32 md:pt-40 pb-12 sm:pb-16 md:pb-20 relative min-h-screen flex items-center" style={{
+      <section className="pt-8 sm:pt-16 md:pt-24 pb-12 sm:pb-16 md:pb-20 relative min-h-screen flex items-center" style={{
         backgroundImage: 'url(https://www.talentica.com/wp-content/uploads/2025/07/Frame-3.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -171,26 +196,16 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
         
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center animate-fade-in relative z-10">
-            {/* Subtle Award Badge - Above Headline */}
-            <div className="mb-6">
-              <div className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 space-x-3 group hover:bg-white/15 transition-all duration-300 cursor-pointer">
-                <div className="w-5 h-5 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center">
-                  <Award className="w-3 h-3 text-white" />
-                </div>
-                <span className="text-white text-sm font-medium">🏆 Design Award Winner</span>
-                <button className="text-white/80 hover:text-white transition-colors text-xs font-medium flex items-center group-hover:translate-x-0.5 transition-transform">
-                  Learn more
-                  <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-0.5 transition-transform" />
-                </button>
-              </div>
-            </div>
-            
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 font-sans leading-tight">
               The Only Recruitment Software
-              <br />
-              <span className="text-green-200">for Tech Companies</span>
+              <br className="hidden sm:block" />
+              <span className="text-green-200"> for Tech Companies</span>
             </h1>
-            
+            <p className="text-base sm:text-lg md:text-xl text-white mb-6 sm:mb-8 max-w-4xl mx-auto font-sans px-4">
+              Built-in AI to stay ahead of evolving skill needs, demand spikes,
+              <br className="hidden md:block" />
+              and the pressure to hire fast in a candidate-driven market.
+            </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 px-4">
               <button 
                 onClick={() => {
