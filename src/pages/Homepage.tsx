@@ -795,7 +795,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
             </div>
           </div>
 
-          {/* Enhanced Awards Section */}
+          {/* {/* Enhanced Awards Section 
           <div className="text-center">
   <div className="inline-flex items-center justify-center p-2 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-full mb-8">
     <span className="bg-white px-6 py-2 rounded-full text-gray-800 font-semibold text-sm">
@@ -838,7 +838,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
       className="h-32 object-contain rounded-xl"
     />
   </div>
-</div>
+</div> */}
 
         </div>
       </section>
