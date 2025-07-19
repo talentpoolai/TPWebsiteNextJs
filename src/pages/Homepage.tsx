@@ -174,7 +174,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 font-sans leading-tight">
               The Only Recruitment Software
               <br className="hidden sm:block" />
-              <span className="text-green-200">for Tech Companies</span>
+              <span className="text-green-200"> for Tech Companies</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white mb-6 sm:mb-8 max-w-4xl mx-auto font-sans px-4">
               Built-in AI to stay ahead of evolving skill needs, demand spikes,
