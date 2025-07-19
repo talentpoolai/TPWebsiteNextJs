@@ -396,11 +396,11 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                         'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700'
                       }`}
                       onClick={() => {
-                        const formSection = document.querySelector('.pipedrive-form-section');
-                        if (formSection) {
-                          formSection.scrollIntoView({ behavior: 'smooth' });
-                        }
-                      }}>
+                  const formSection = document.querySelector('.pipedrive-form-section');
+                  if (formSection) {
+                    formSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}>
                         <span>Explore This Solution</span>
                         <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-3 group-hover/btn:translate-x-1 transition-transform duration-300" />
                       </button>
