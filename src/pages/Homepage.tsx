@@ -442,9 +442,9 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                 <p className="text-lg text-gray-600 mb-6">
                   Recognized by leading industry platforms for excellence in recruitment technology
                 </p>
-                <button className="bg-gradient-to-r from-talentpool-dark to-green-600 text-white px-6 py-3 rounded-full font-semibold hover:from-talentpool-medium hover:to-green-700 transition-all duration-300 shadow-lg">
+                {/* <button className="bg-gradient-to-r from-talentpool-dark to-green-600 text-white px-6 py-3 rounded-full font-semibold hover:from-talentpool-medium hover:to-green-700 transition-all duration-300 shadow-lg">
                   Read G2 reviews
-                </button>
+                </button> */}
               </div>
 
               {/* Right side - Award badges */}
