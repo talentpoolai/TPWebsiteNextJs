@@ -435,7 +435,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
           <div className="bg-gradient-to-br from-green-50 to-talentpool-light rounded-3xl p-8 sm:p-12 shadow-lg border border-green-100">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_3fr] gap-8 sm:gap-12 items-center">
               {/* Left side - Rating */}
-              <div className="text-center lg:text-left">
+              <div className="text-center lg:text-center">
                 {/* <div className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
                   Industry Recognition
                 </div> */}
