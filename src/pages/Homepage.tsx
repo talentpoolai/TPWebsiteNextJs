@@ -442,7 +442,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                 <p className="text-lg text-gray-600 mb-6">
                   Recognized by leading industry platforms for excellence in recruitment technology
                 </p>
-                <div className="flex justify-center items-center mb-8">
+                <div className="flex justify-center items-left mb-8">
               <div className="bg-white rounded-full px-6 py-3 shadow-lg border border-gray-200 flex items-center space-x-2">
                 <span className="text-2xl font-bold text-gray-900">4.8/5.0</span>
                 <div className="flex items-center space-x-1">
