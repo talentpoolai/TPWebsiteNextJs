@@ -166,6 +166,20 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}>
+
+        {/* Subtle Award Badge - Above Headline */}
+            <div className="mb-6">
+              <div className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 space-x-3 group hover:bg-white/15 transition-all duration-300 cursor-pointer">
+                <div className="w-5 h-5 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center">
+                  <Award className="w-3 h-3 text-white" />
+                </div>
+                <span className="text-white text-sm font-medium">🏆 Design Award Winner</span>
+                <button className="text-white/80 hover:text-white transition-colors text-xs font-medium flex items-center group-hover:translate-x-0.5 transition-transform">
+                  Learn more
+                  <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-0.5 transition-transform" />
+                </button>
+              </div>
+            </div>
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/50"></div>
         
