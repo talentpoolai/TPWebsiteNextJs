@@ -167,6 +167,10 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
         backgroundRepeat: 'no-repeat'
       }}>
 
+        
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/50"></div>
+
         {/* Subtle Award Badge - Above Headline */}
             <div className="mb-6">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 space-x-3 group hover:bg-white/15 transition-all duration-300 cursor-pointer">
@@ -180,8 +184,6 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                 </button>
               </div>
             </div>
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/50"></div>
         
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center animate-fade-in relative z-10">
