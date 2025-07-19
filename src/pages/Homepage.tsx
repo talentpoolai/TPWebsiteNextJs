@@ -138,7 +138,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
   ];
 
   // Use the first 3 featured posts or fallback to default content
-  const displayPosts = featuredPosts.length > 0 ? featuredPosts.slice(0, 1) : (blogIndex as any[]).slice(0, 1);
+  const displayPosts = featuredPosts.length > 0 ? featuredPosts.slice(0, 3) : (blogIndex as any[]).slice(0, 3);
 
   const companyLogos = [
     { src: "/1.png", alt: "Company 1" },
