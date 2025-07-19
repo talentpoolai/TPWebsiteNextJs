@@ -440,7 +440,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                   Industry Recognition
                 </div> */}
                 <h1 className="text-2xl sm:text-3xl md:text-4xl text-lg text-gray-600 mb-6">
-                  <b>Industry Recognitions</b>
+                  <b>Awards</b>
                 </h1>
                 <div className="flex justify-center items-center mb-8">
               <div className="bg-white rounded-full px-6 py-3 shadow-lg border border-gray-200 flex items-center space-x-2">
