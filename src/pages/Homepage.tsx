@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BlogPost } from '../../lib/blog';
-import { ArrowRight, CheckCircle, Star, Users, TrendingUp, Target, Zap, ChevronLeft, ChevronRight, Award, Check, CheckCheck, CircleCheck } from 'lucide-react';
-import PipeDriveForm from '../components/PipeDriveForm';
+import { ArrowRight, CheckCircle, Star, Users, TrendingUp, Target, Zap, ChevronLeft, ChevronRight, Award, Check, CheckCheck, CheckCircle as CircleCheck } from 'lucide-react'components/PipeDriveForm';
 import blogIndex from '../data/blogIndex.json';
 
 interface HomepageProps {
@@ -392,7 +391,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                             card.accentColor === 'purple' ? 'bg-gradient-to-br from-purple-500 to-purple-600' :
                             'bg-gradient-to-br from-orange-500 to-orange-600'
                           }`}>
-                            <Check className="w-1 h-1 sm:w-5 sm:h-5 text-white" />
+                            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                           </div>
                           <div className="pt-1 sm:pt-2">
                             <span className="text-base sm:text-lg font-semibold text-gray-800 group-hover/item:text-talentpool-dark transition-colors duration-300">
@@ -442,24 +441,9 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                 <p className="text-lg text-gray-600 mb-6">
                   Recognized by leading industry platforms for excellence in recruitment technology
                 </p>
-                <div className="flex justify-center items-center mb-8">
-              <div className="bg-white rounded-full px-6 py-3 shadow-lg border border-gray-200 flex items-center space-x-2">
-                <span className="text-2xl font-bold text-gray-900">4.8/5.0</span>
-                <div className="flex items-center space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <img 
-                  src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.stickpng.com%2Fimg%2Ficons-logos-emojis%2Freview-platforms-logos%2Fcapterra-thumbnail&psig=AOvVaw0j6qR_OZrWRroLCDJV7U7-&ust=1753035673221000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJjd0_bEyY4DFQAAAAAdAAAAABAE"
-                  alt="G2 Badge"
-                  className="h-6 w-6 object-contain ml-2"
-                />
-              </div>
-            </div>
-                {/* <button className="bg-gradient-to-r from-talentpool-dark to-green-600 text-white px-6 py-3 rounded-full font-semibold hover:from-talentpool-medium hover:to-green-700 transition-all duration-300 shadow-lg">
+                <button className="bg-gradient-to-r from-talentpool-dark to-green-600 text-white px-6 py-3 rounded-full font-semibold hover:from-talentpool-medium hover:to-green-700 transition-all duration-300 shadow-lg">
                   Read G2 reviews
-                </button> */}
+                </button>
               </div>
 
               {/* Right side - Award badges */}
@@ -467,7 +451,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                 {/* Capterra Best Value */}
                 <div className="group hover:scale-105 transition-transform duration-300">
                   <img 
-                    src="https://www.softwaresuggest.com/award_logo/trustworthy-tech-2025.png"
+                    src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/category-leader-winter-2024-300x300-1.png"
                     alt="Category Leader Winter 2024"
                     className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
                   />
@@ -476,7 +460,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                 {/* Software Suggest Top 50 */}
                 <div className="group hover:scale-105 transition-transform duration-300">
                   <img 
-                    src="https://www.softwaresuggest.com/award_logo/highest-review-2024.png"
+                    src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/high-performer-winter-2024-300x300-1.png"
                     alt="High Performer Winter 2024"
                     className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
                   />
@@ -485,44 +469,12 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                 {/* G2 High Performer */}
                 <div className="group hover:scale-105 transition-transform duration-300">
                   <img 
-                    src="https://www.softwaresuggest.com/award_logo/easy-usability-winter-2024.png"
+                    src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/tracking-software.png"
                     alt="Tracking Software"
                     className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
                   />
                 </div>
 
-                {/* G2 Best Support */}
-                <div className="group hover:scale-105 transition-transform duration-300">
-                  <img 
-                    src="https://www.softwaresuggest.com/award_logo/high-performer-winter-2024.png"
-                    alt="Consumer Support"
-                    className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
-                  />
-                </div>
-                {/* G2 Best Support */}
-                <div className="group hover:scale-105 transition-transform duration-300">
-                  <img 
-                    src="https://www.softwaresuggest.com/award_logo/category-leader-winter-2024.png"
-                    alt="Consumer Support"
-                    className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
-                  />
-                </div>
-                {/* G2 Best Support */}
-                <div className="group hover:scale-105 transition-transform duration-300">
-                  <img 
-                    src="	https://www.thetalentpool.ai/wp-content/uploads/2024/09/tracking-software.png"
-                    alt="Consumer Support"
-                    className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
-                  />
-                </div>
-                {/* G2 Best Support */}
-                <div className="group hover:scale-105 transition-transform duration-300">
-                  <img 
-                    src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/consumer-support-300x300-1.png"
-                    alt="Consumer Support"
-                    className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
-                  />
-                </div>
                 {/* G2 Best Support */}
                 <div className="group hover:scale-105 transition-transform duration-300">
                   <img 
@@ -544,7 +496,21 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               Don't Just Take Our Word For It
             </h2>
-            
+            <div className="flex justify-center items-center mb-8">
+              <div className="bg-white rounded-full px-6 py-3 shadow-lg border border-gray-200 flex items-center space-x-2">
+                <span className="text-2xl font-bold text-gray-900">4.8/5.0</span>
+                <div className="flex items-center space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <img 
+                  src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/category-leader-winter-2024-300x300-1.png"
+                  alt="G2 Badge"
+                  className="h-6 w-6 object-contain ml-2"
+                />
+              </div>
+            </div>
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
               See what our customers are saying about their experience with Talentpool
             </p>
