@@ -20,7 +20,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
       customerName: "Bob Friday",
       company: "",
       logo: "/images/rexel1.png",
-      thumbnail: "https://www.talentica.com/wp-content/uploads/2019/02/Bob-1.webp"
+      thumbnail: "/rexelthumnail.png"
     }
     // {
     //   url: "https://tinyurl.com/bdfm47pu",
