@@ -302,7 +302,7 @@ const Benefits: React.FC = () => {
                       onClick={() => setActiveTab(key)}
                       className={`flex items-center space-x-3 px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${
                         activeTab === key
-                          ? `bg-${role.color}-600 text-white shadow-lg`
+                          ? 'bg-talentpool-dark text-white shadow-lg'
                           : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                       }`}
                     >
