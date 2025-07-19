@@ -187,7 +187,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
               </div>
             </div>
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white mb-4 sm:mb-6 font-sans leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white mb-4 sm:mb-6 font-sans leading-tight">
               The Only Recruitment Software
               <br className="hidden sm:block" />
               <span className="text-green-200"> for Tech Companies</span>
