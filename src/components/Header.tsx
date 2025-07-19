@@ -19,8 +19,8 @@ const Header: React.FC = () => {
     },
     { 
       name: 'Resources', 
-      href: '/resources',
-      hasDropdown: true,
+      href: '/blog',
+      hasDropdown: false,
       dropdownItems: [
         {
           title: "Blog",
