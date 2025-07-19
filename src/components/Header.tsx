@@ -333,13 +333,13 @@ const Header: React.FC = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden py-4 border-t border-white/20 bg-white/90 backdrop-blur-md rounded-b-2xl">
-              <nav className="space-y-4">
+            <div className="md:hidden py-6 border-t border-white/20 bg-white/95 backdrop-blur-md rounded-b-2xl shadow-lg">
+              <nav className="space-y-2">
                 {navigation.map((item) => (
                   <div key={item.name}>
                     <Link
                       to={item.href}
-                      className={`block text-sm font-medium transition-colors hover:text-talentpool-dark px-2 py-1 ${
+                      className={`block text-base font-medium transition-all duration-200 hover:text-talentpool-dark hover:bg-talentpool-light px-4 py-3 rounded-lg mx-2 ${
                         isActive(item.href) ? 'text-talentpool-dark' : 'text-gray-700'
                       }`}
                       onClick={() => setIsMenuOpen(false)}
@@ -349,22 +349,26 @@ const Header: React.FC = () => {
                     
                     {/* Mobile Dropdown Items */}
                     {item.hasDropdown && (
-                      <div className="mt-2 ml-4 space-y-2">
+                      <div className="mt-2 ml-6 space-y-2">
                         {item.dropdownItems?.slice(0, 4).map((dropdownItem, index) => (
-                          <div key={index} className="flex items-center space-x-2 text-xs text-gray-600 py-1">
-                            {dropdownItem.icon}
+                          <Link
+                            key={index}
+                            to={index === 0 ? '/blog' : '/case-studies'}
+                            className="flex items-center space-x-3 text-sm text-gray-600 py-2 px-3 rounded-lg hover:bg-gray-100 transition-colors"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <div className="flex-shrink-0">
+                              {dropdownItem.icon}
+                            </div>
                             <span>{dropdownItem.title}</span>
-                          </div>
+                          </Link>
                         ))}
                       </div>
                     )}
                   </div>
                 ))}
-                <div className="pt-4 space-y-3 border-t border-gray-100 mt-4">
-                  <button className="block w-full text-left text-sm font-medium text-gray-700 px-2 py-1">
-                    Talk to Us
-                  </button>
-                  <button
+                <div className="pt-4 space-y-3 border-t border-gray-200 mt-6 mx-2">
+                  <button 
                     onClick={() => {
                       const formSection = document.querySelector('.pipedrive-form-section');
                       if (formSection) {
@@ -372,10 +376,19 @@ const Header: React.FC = () => {
                       }
                       setIsMenuOpen(false);
                     }}
-                    className="block w-full bg-talentpool-dark text-white px-6 py-3 rounded-lg font-medium text-center"
+                    className="block w-full text-left text-base font-medium text-gray-700 px-4 py-3 rounded-lg hover:bg-talentpool-light hover:text-talentpool-dark transition-all duration-200"
+                  >
+                    Talk to Us
+                  </button>
+                  <Link
+                    to="/start-free"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                    }}
+                    className="block w-full bg-talentpool-dark text-white px-6 py-4 rounded-xl font-semibold text-center hover:bg-talentpool-medium transition-all duration-200 shadow-lg"
                   >
                     Start Free
-                  </button>
+                  </Link>
                 </div>
               </nav>
             </div>
