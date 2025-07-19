@@ -470,6 +470,24 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                   />
                 </div>
 
+                {/* Capterra Best Value */}
+                <div className="group hover:scale-105 transition-transform duration-300">
+                  <img 
+                    src="https://www.softwaresuggest.com/award_logo/easy-usability-winter-2024.png"
+                    alt="Category Leader Winter 2024"
+                    className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
+                  />
+                </div>
+                
+                {/* Capterra Best Value */}
+                <div className="group hover:scale-105 transition-transform duration-300">
+                  <img 
+                    src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/category-leader-winter-2024-300x300-1.png"
+                    alt="Category Leader Winter 2024"
+                    className="h-20 sm:h-24 object-contain filter drop-shadow-md group-hover:drop-shadow-lg transition-all duration-300"
+                  />
+                </div>
+
                 {/* Software Suggest Top 50 */}
                 <div className="group hover:scale-105 transition-transform duration-300">
                   <img 
