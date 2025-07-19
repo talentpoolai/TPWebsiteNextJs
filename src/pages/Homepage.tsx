@@ -432,7 +432,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
       {/* Awards & Recognition Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-green-50 to-talentpool-light rounded-3xl p-8 sm:p-12 shadow-lg border border-green-100">
+          <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-lg border border-green-100">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_3fr] gap-8 sm:gap-12 items-center">
               {/* Left side - Rating */}
               <div className="text-center lg:text-center">
