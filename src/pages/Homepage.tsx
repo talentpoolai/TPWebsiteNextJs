@@ -795,7 +795,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
             </div>
           </div>
 
-          {/* {/* Enhanced Awards Section 
+          {/* Enhanced Awards Section 
           <div className="text-center">
   <div className="inline-flex items-center justify-center p-2 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-full mb-8">
     <span className="bg-white px-6 py-2 rounded-full text-gray-800 font-semibold text-sm">
@@ -810,28 +810,28 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
   </p>
 
   <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
-    {/* Software Suggest Category Leader */}
+   
     <img 
       src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/category-leader-winter-2024-300x300-1.png"
       alt="Team working together"
       className="h-32 object-contain rounded-xl"
     />
 
-    {/* Software Suggest High Performer */}
+   
     <img 
       src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/high-performer-winter-2024-300x300-1.png"
       alt="Team working together"
       className="h-32 object-contain rounded-xl"
     />
 
-    {/* TechImply Most Trusted */}
+    
     <img 
       src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/tracking-software.png"
       alt="Team working together"
       className="h-32 object-contain rounded-xl"
     />
 
-    {/* TechImply Best Support */}
+  
     <img 
       src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/consumer-support-300x300-1.png"
       alt="Team working together"
