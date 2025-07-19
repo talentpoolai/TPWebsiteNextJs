@@ -142,13 +142,13 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
 
   const companyLogos = [
     { src: "/1.png", alt: "Company 1" },
-    { src: "/2.png", alt: "Company 2" },
+    { src: "/8.png", alt: "Company 2" },
     { src: "/3.png", alt: "Company 3" },
     { src: "/4.png", alt: "Company 4" },
     { src: "/5.png", alt: "Company 5" },
     { src: "/6.png", alt: "Company 6" },
     { src: "/7.png", alt: "Company 7" },
-    { src: "/8.png", alt: "Company 8" },
+    { src: "/2.png", alt: "Company 8" },
     { src: "/9.png", alt: "Company 9" },
     { src: "/10.png", alt: "Company 10" },
     { src: "/11.png", alt: "Company 11" },
