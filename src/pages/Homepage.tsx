@@ -160,12 +160,13 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-talentpool-light to-white py-20 pt-32 md:pt-40">
+      <section className="bg-gradient-to-br from-talentpool-light to-white py-20 pt-32 md:pt-40" style={{
         backgroundImage: 'url(https://www.talentica.com/wp-content/uploads/2025/07/Frame-3.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
-      }}>
+      }}
+      >
 
         
         {/* Dark overlay for better text readability */}
