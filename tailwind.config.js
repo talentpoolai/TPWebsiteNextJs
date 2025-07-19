@@ -31,8 +31,8 @@ export default {
         }
       },
       fontFamily: {
-        'Roboto': ['Inter', 'system-ui', 'sans-serif'],
-      },
+  'Roboto': ['Roboto', 'Open Sans', 'Lato', 'Segoe UI', 'Arial', 'Inter', 'system-ui', 'sans-serif'],
+}
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',
         'slide-up': 'slideUp 0.8s ease-out',
