@@ -545,21 +545,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               Don't Just Take Our Word For It
             </h2>
-            <div className="flex justify-center items-center mb-8">
-              <div className="bg-white rounded-full px-6 py-3 shadow-lg border border-gray-200 flex items-center space-x-2">
-                <span className="text-2xl font-bold text-gray-900">4.8/5.0</span>
-                <div className="flex items-center space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <img 
-                  src="https://www.thetalentpool.ai/wp-content/uploads/2024/09/category-leader-winter-2024-300x300-1.png"
-                  alt="G2 Badge"
-                  className="h-6 w-6 object-contain ml-2"
-                />
-              </div>
-            </div>
+            
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
               See what our customers are saying about their experience with Talentpool
             </p>
