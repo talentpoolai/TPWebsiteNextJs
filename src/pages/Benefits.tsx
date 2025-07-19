@@ -102,7 +102,7 @@ const Benefits: React.FC = () => {
     <div className="min-h-screen bg-white">
       <main>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-talentpool-light to-white py-20 pt-40">
+        <section className="bg-gradient-to-br from-talentpool-light to-white py-20 pt-32 md:pt-40">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center animate-fade-in">
               <div className="inline-flex items-center justify-center p-2 bg-gradient-to-r from-talentpool-light to-green-100 rounded-full mb-6">

@@ -48,7 +48,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, relatedPosts }) => {
 
       <main>
           {/* Breadcrumb */}
-          <div className="bg-gray-50 py-4 pt-36">
+          <div className="bg-gray-50 py-4 pt-28 md:pt-36">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
               <nav className="flex items-center space-x-2 text-sm">
                 <Link href="/" className="text-gray-500 hover:text-talentpool-dark">Home</Link>
