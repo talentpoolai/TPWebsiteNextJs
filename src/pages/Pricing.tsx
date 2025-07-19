@@ -972,305 +972,150 @@ const Pricing: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  {/* Remove the old section wrapper that was duplicated */}
-  <div className="hidden">
-    <div className="mt-12 text-center">
-      <div className="bg-talentpool-dark rounded-xl p-8 text-white">
-        <h3 className="text-2xl font-bold mb-4">Need Expert Assistance?</h3>
-        <p className="text-talentpool-light mb-6 max-w-2xl mx-auto">
-          Our team is ready to help you migrate, onboard, and succeed with Talentpool
-        </p>
-        <button 
-          onClick={() => {
-            const formSection = document.querySelector('.pipedrive-form-section');
-            if (formSection) {
-              formSection.scrollIntoView({ behavior: 'smooth' });
-            }
-          }}
-          className="bg-white text-talentpool-dark px-8 py-3 rounded-lg font-semibold hover:bg-talentpool-light transition-colors"
-        >
-          Contact Our Team
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-{/* Clean up - remove duplicate sections that were created */}
-<div className="hidden">
-  {/* Support Services Section */}
-  <section className="py-20 bg-gray-50">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Professional Services
-        </h2>
-        <p className="text-xl text-gray-600">
-          Get expert help to maximize your success with Talentpool
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Data Migration */}
-        <div className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-shadow">
-          <div className="text-center mb-6">
-            <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Settings className="w-6 h-6 text-blue-600" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Data Migration</h3>
-            <p className="text-gray-600 text-sm">
-              Seamlessly migrate your existing candidate data and hiring history without any downtime.
+      {/* Remove the old section wrapper that was duplicated */}
+      <div className="hidden">
+        <div className="mt-12 text-center">
+          <div className="bg-talentpool-dark rounded-xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">Need Expert Assistance?</h3>
+            <p className="text-talentpool-light mb-6 max-w-2xl mx-auto">
+              Our team is ready to help you migrate, onboard, and succeed with Talentpool
             </p>
-          </div>
-          <div className="space-y-3">
-            <div className="flex items-center text-sm text-gray-700">
-              <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-              <span>Complete data transfer</span>
-            </div>
-            <div className="flex items-center text-sm text-gray-700">
-              <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-              <span>Zero downtime process</span>
-            </div>
-            <div className="flex items-center text-sm text-gray-700">
-              <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-              <span>Data integrity guaranteed</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Phone Support */}
-        <div className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-shadow">
-          <div className="text-center mb-6">
-            <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Shield className="w-6 h-6 text-green-600" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Premium Phone Support</h3>
-            <p className="text-gray-600 text-sm">
-              Get priority phone support with dedicated account management and faster response times.
-            </p>
-          </div>
-          <div className="space-y-3">
-            <div className="flex items-center text-sm text-gray-700">
-              <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-              <span>Priority phone access</span>
-            </div>
-            <div className="flex items-center text-sm text-gray-700">
-              <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-              <span>Dedicated account manager</span>
-            </div>
-            <div className="flex items-center text-sm text-gray-700">
-              <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-              <span>Same-day response</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Guided Onboarding */}
-        <div className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-shadow">
-          <div className="text-center mb-6">
-            <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Zap className="w-6 h-6 text-purple-600" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Guided Onboarding</h3>
-            <p className="text-gray-600 text-sm">
-              Work with our experts to customize workflows and train your team for maximum success.
-            </p>
-          </div>
-          <div className="space-y-3">
-            <div className="flex items-center text-sm text-gray-700">
-              <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-              <span>Personalized setup sessions</span>
-            </div>
-            <div className="flex items-center text-sm text-gray-700">
-              <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-              <span>Custom workflow design</span>
-            </div>
-            <div className="flex items-center text-sm text-gray-700">
-              <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-              <span>Team training included</span>
-            </div>
+            <button 
+              onClick={() => {
+                const formSection = document.querySelector('.pipedrive-form-section');
+                if (formSection) {
+                  formSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="bg-white text-talentpool-dark px-8 py-3 rounded-lg font-semibold hover:bg-talentpool-light transition-colors"
+            >
+              Contact Our Team
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Contact CTA */}
-      <div className="mt-12 text-center">
-        <div className="bg-talentpool-dark rounded-xl p-8 text-white">
-          <h3 className="text-2xl font-bold mb-4">Need Expert Assistance?</h3>
-          <p className="text-talentpool-light mb-6 max-w-2xl mx-auto">
-            Our team is ready to help you migrate, onboard, and succeed with Talentpool
-          </p>
-          <button 
-            onClick={() => {
-              const formSection = document.querySelector('.pipedrive-form-section');
-              if (formSection) {
-                formSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-            className="bg-white text-talentpool-dark px-8 py-3 rounded-lg font-semibold hover:bg-talentpool-light transition-colors"
-          >
-            Contact Our Team
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-      {/* FAQ */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
-            </h2>
-          </div>
-
-          <div className="space-y-8">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border-b border-gray-200 pb-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ROI Calculator */}
-      <section className="py-20 bg-talentpool-light">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Calculate Your ROI
-            </h2>
-            <p className="text-xl text-gray-600">
-              See how much you could save with Talentpool
-            </p>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-6">Your Current Costs</h3>
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Monthly hires
-                    </label>
-                    <input 
-                      type="number" 
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-talentpool-dark focus:border-transparent"
-                      placeholder="10"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Average cost per hire
-                    </label>
-                    <input 
-                      type="number" 
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-talentpool-dark focus:border-transparent"
-                      placeholder="125000"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Hours per hire
-                    </label>
-                    <input 
-                      type="number" 
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-talentpool-dark focus:border-transparent"
-                      placeholder="40"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-6">Your Savings</h3>
-                <div className="space-y-4">
-                  <div className="bg-white rounded-lg p-4">
-                    <p className="text-sm text-gray-600">Monthly cost savings</p>
-                    <p className="text-2xl font-bold text-talentpool-dark">₹7,50,000</p>
-                  </div>
-                  <div className="bg-white rounded-lg p-4">
-                    <p className="text-sm text-gray-600">Annual savings</p>
-                    <p className="text-2xl font-bold text-talentpool-dark">₹90,00,000</p>
-                  </div>
-                  <div className="bg-white rounded-lg p-4">
-                    <p className="text-sm text-gray-600">ROI</p>
-                    <p className="text-2xl font-bold text-talentpool-dark">2,400%</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      {/* Final CTA */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-50 pipedrive-form-section">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="relative bg-white rounded-2xl sm:rounded-3xl p-8 sm:p-12 shadow-2xl border border-gray-100 overflow-hidden">
-            
-            {/* Background decoration */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 left-0 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-gradient-to-br from-talentpool-light to-green-200 rounded-full blur-3xl -translate-x-16 sm:-translate-x-32 -translate-y-16 sm:-translate-y-32"></div>
-              <div className="absolute bottom-0 right-0 w-24 sm:w-32 md:w-48 h-24 sm:h-32 md:h-48 bg-gradient-to-tl from-green-200 to-talentpool-light rounded-full blur-3xl translate-x-12 sm:translate-x-24 translate-y-12 sm:translate-y-24"></div>
-            </div>
-            
-            <div className="relative max-w-4xl mx-auto">
-              <div className="inline-flex items-center justify-center p-1 bg-gradient-to-r from-talentpool-light to-green-100 rounded-full mb-6 sm:mb-8">
-                <span className="bg-white px-4 sm:px-8 py-2 sm:py-3 rounded-full text-talentpool-dark font-bold text-xs sm:text-sm shadow-lg">
-                  🚀 Ready to Get Started?
-                </span>
-              </div>
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">
-                Transform Your Hiring Process
-                <br />
-                <span className="bg-gradient-to-r from-talentpool-dark to-green-600 bg-clip-text text-transparent">
-                  Starting Today
-                </span>
-              </h3>
-              <p className="text-gray-600 mb-8 sm:mb-12 text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto">
-                Join thousands of tech companies already using Talentpool to hire faster, reduce drop-offs, and build better teams
+      {/* Clean up - remove duplicate sections that were created */}
+      <div className="hidden">
+        {/* Support Services Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Professional Services
+              </h2>
+              <p className="text-xl text-gray-600">
+                Get expert help to maximize your success with Talentpool
               </p>
+            </div>
 
-              {/* PipeDrive Form */}
-              <div className="mb-8 sm:mb-12">
-                <PipeDriveForm />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Data Migration */}
+              <div className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-shadow">
+                <div className="text-center mb-6">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Settings className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Data Migration</h3>
+                  <p className="text-gray-600 text-sm">
+                    Seamlessly migrate your existing candidate data and hiring history without any downtime.
+                  </p>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center text-sm text-gray-700">
+                    <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span>Complete data transfer</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-700">
+                    <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span>Zero downtime process</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-700">
+                    <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span>Data integrity guaranteed</span>
+                  </div>
+                </div>
               </div>
-              
-              {/* Trust indicators 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm text-gray-500">
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-                  <span>60-day free trial</span>
+
+              {/* Phone Support */}
+              <div className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-shadow">
+                <div className="text-center mb-6">
+                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Premium Phone Support</h3>
+                  <p className="text-gray-600 text-sm">
+                    Get priority phone support with dedicated account management and faster response times.
+                  </p>
                 </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-                  <span>No credit card required</span>
+                <div className="space-y-3">
+                  <div className="flex items-center text-sm text-gray-700">
+                    <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span>Priority phone access</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-700">
+                    <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span>Dedicated account manager</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-700">
+                    <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span>Same-day response</span>
+                  </div>
                 </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-                  <span>Setup in 5 minutes</span>
+              </div>
+
+              {/* Guided Onboarding */}
+              <div className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-shadow">
+                <div className="text-center mb-6">
+                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Guided Onboarding</h3>
+                  <p className="text-gray-600 text-sm">
+                    Work with our experts to customize workflows and train your team for maximum success.
+                  </p>
                 </div>
-              </div>*/}
+                <div className="space-y-3">
+                  <div className="flex items-center text-sm text-gray-700">
+                    <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span>Personalized setup sessions</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-700">
+                    <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span>Custom workflow design</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-700">
+                    <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span>Team training included</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact CTA */}
+            <div className="mt-12 text-center">
+              <div className="bg-talentpool-dark rounded-xl p-8 text-white">
+                <h3 className="text-2xl font-bold mb-4">Need Expert Assistance?</h3>
+                <p className="text-talentpool-light mb-6 max-w-2xl mx-auto">
+                  Our team is ready to help you migrate, onboard, and succeed with Talentpool
+                </p>
+                <button 
+                  onClick={() => {
+                    const formSection = document.querySelector('.pipedrive-form-section');
+                    if (formSection) {
+                      formSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  className="bg-white text-talentpool-dark px-8 py-3 rounded-lg font-semibold hover:bg-talentpool-light transition-colors"
+                >
+                  Contact Our Team
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-    </div>
-  );
-};
-
-export default Pricing;
+        </section>
+      </div>
 
       {/* FAQ */}
       <section className="py-20 bg-white">
