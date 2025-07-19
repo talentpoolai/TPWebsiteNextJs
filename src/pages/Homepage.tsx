@@ -192,15 +192,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
               and the pressure to hire fast in a candidate-driven market.
             </p>
             
-            {/* Mobile Award Badge - Inline */}
-            <div className="lg:hidden mb-6">
-              <div className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 space-x-2">
-                <div className="w-5 h-5 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center">
-                  <Award className="w-3 h-3 text-white" />
-                </div>
-                <span className="text-white text-sm font-medium">🏆 Design Award Winner</span>
-              </div>
-            </div>
+            
             
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 px-4">
               <button 
