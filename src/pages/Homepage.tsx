@@ -21,23 +21,23 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
       company: "",
       logo: "/siemens.png",
       thumbnail: "https://www.talentica.com/wp-content/uploads/2019/02/Bob-1.webp"
-    },
-    {
-      url: "https://tinyurl.com/bdfm47pu",
-      quote: "Talentica stood out with constructive criticism and fiercely innovative approach. Their commitment and motivation made them an organic part of our organization.",
-      customerName: "Daniel Nissan",
-      company: "",
-      logo: "/coditas.png",
-      thumbnail: "https://www.talentica.com/wp-content/uploads/2025/06/Daniel-Nissan-1.webp"
-    },
-    {
-      url: "https://tinyurl.com/bdfm47pu",
-      quote: "Talentica understood our user needs and helped us design a product that sells successfully. They brought expertise in AI and blockchain to enable innovation for us.",
-      customerName: "Carmelle Cadet",
-      company: "",
-      logo: "/.png",
-      thumbnail: "https://www.talentica.com/wp-content/uploads/2019/03/Carmel-1.webp"
     }
+    // {
+    //   url: "https://tinyurl.com/bdfm47pu",
+    //   quote: "Talentica stood out with constructive criticism and fiercely innovative approach. Their commitment and motivation made them an organic part of our organization.",
+    //   customerName: "Daniel Nissan",
+    //   company: "",
+    //   logo: "/coditas.png",
+    //   thumbnail: "https://www.talentica.com/wp-content/uploads/2025/06/Daniel-Nissan-1.webp"
+    // },
+    // {
+    //   url: "https://tinyurl.com/bdfm47pu",
+    //   quote: "Talentica understood our user needs and helped us design a product that sells successfully. They brought expertise in AI and blockchain to enable innovation for us.",
+    //   customerName: "Carmelle Cadet",
+    //   company: "",
+    //   logo: "/.png",
+    //   thumbnail: "https://www.talentica.com/wp-content/uploads/2019/03/Carmel-1.webp"
+    // }
   ];
 
   const nextVideo = () => {
