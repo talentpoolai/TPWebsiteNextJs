@@ -169,30 +169,20 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/50"></div>
         
-        {/* Subtle Award Badge - Floating */}
-        <div className="absolute top-8 left-8 z-20 hidden lg:block">
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 flex items-center space-x-2">
-            <div className="w-6 h-6 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center">
-              <Award className="w-3 h-3 text-white" />
-            </div>
-            <span className="text-white text-sm font-medium">Design Award Winner</span>
-          </div>
-        </div>
-        
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center animate-fade-in relative z-10">
+            {/* Subtle Award Badge - Above Headline */}
+            <div className="mb-6">
+              <div className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 space-x-2">
+                <div className="w-5 h-5 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center">
+                  <Award className="w-3 h-3 text-white" />
+                </div>
+                <span className="text-white text-sm font-medium">🏆 Design Award Winner</span>
+              </div>
+            </div>
+            
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 font-sans leading-tight">
               The Only Recruitment Software
-              <br className="hidden sm:block" />
-              <span className="text-green-200"> for Tech Companies</span>
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl text-white mb-6 sm:mb-8 max-w-4xl mx-auto font-sans px-4">
-              Built-in AI to stay ahead of evolving skill needs, demand spikes,
-              <br className="hidden md:block" />
-              and the pressure to hire fast in a candidate-driven market.
-            </p>
-            
-            
             
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 px-4">
               <button 
