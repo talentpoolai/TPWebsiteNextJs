@@ -179,7 +179,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                 {/* <div className="w-5 h-5 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center">
                   <Award className="w-3 h-3 text-white" />
                 </div> */}
-                <span className="text-white text-sm font-medium">🏆 <br> </br>Best Design Project 2025 </span>
+                <span className="text-white text-sm font-medium">🏆 Best Design Project 2025 </span>
                 <button className="text-white/80 hover:text-white transition-colors text-xs font-medium flex items-center group-hover:translate-x-0.5 transition-transform">
                   Learn more
                   <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-0.5 transition-transform" />
