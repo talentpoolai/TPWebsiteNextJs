@@ -392,7 +392,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
                             card.accentColor === 'purple' ? 'bg-gradient-to-br from-purple-500 to-purple-600' :
                             'bg-gradient-to-br from-orange-500 to-orange-600'
                           }`}>
-                            <Check className="w-1 h-1 sm:w-5 sm:h-5 text-white" />
+                            <CheckCheck className="w-1 h-1 sm:w-5 sm:h-5 text-white" />
                           </div>
                           <div className="pt-1 sm:pt-2">
                             <span className="text-base sm:text-lg font-semibold text-gray-800 group-hover/item:text-talentpool-dark transition-colors duration-300">
