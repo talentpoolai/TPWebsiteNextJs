@@ -31,10 +31,8 @@ export default {
         }
       },
       fontFamily: {
-  sans: ['Montserrat', 'sans-serif'],
-  heading: ['Oswald', 'sans-serif'],
-  serif: ['Playfair Display', 'serif'],
-},
+        'Roboto': ['Inter', 'system-ui', 'sans-serif'],
+      },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',
         'slide-up': 'slideUp 0.8s ease-out',
