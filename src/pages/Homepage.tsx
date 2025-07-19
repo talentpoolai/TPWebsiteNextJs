@@ -20,7 +20,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
       customerName: "Bob Friday",
       company: "",
       logo: "/images/rexel1.png",
-      thumbnail: "/rexelthumnail.png"
+      thumbnail: "/rexelthumbnail.png"
     }
     // {
     //   url: "https://tinyurl.com/bdfm47pu",
