@@ -541,7 +541,7 @@ const Homepage: React.FC<HomepageProps> = ({ featuredPosts = [] }) => {
             </h2>
             
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-              See what our customers are saying about their experience with Talentpool
+              See how leading companies are transforming their hiring processes and achieving remarkable results
             </p>
           </div>
 
